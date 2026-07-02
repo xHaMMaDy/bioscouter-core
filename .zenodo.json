@@ -1,0 +1,35 @@
+{
+  "title": "BioScouter Core: public scientific components for multi-omics dataset discovery",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "version": "0.1.0",
+  "language": "eng",
+  "description": "BioScouter Core contains the public scientific and reproducibility components of BioScouter, including public multi-omics repository adapters, unified dataset schemas, deterministic query expansion, metadata-readiness scoring, faceting, search orchestration, benchmark queries, frozen benchmark outputs, independent relevance-evaluation materials, and scoring scripts.",
+  "creators": [
+    {
+      "name": "Hammad, Ibrahim Abdelkarim",
+      "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+    },
+    {
+      "name": "Elhefnawy, Amr M.",
+      "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+    }
+  ],
+  "keywords": [
+    "multi-omics",
+    "bioinformatics",
+    "federated search",
+    "dataset discovery",
+    "reproducibility",
+    "metadata readiness"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/xHaMMaDy/bioscouter-core",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
+
