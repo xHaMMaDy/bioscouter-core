@@ -1,0 +1,11 @@
+{
+  "annotator_A_rows": 300,
+  "annotator_B_rows": 300,
+  "annotator_A_valid_labels": 300,
+  "annotator_B_valid_labels": 300,
+  "annotator_A_problems": [],
+  "annotator_B_problems": [],
+  "keys_only_in_A": [],
+  "keys_only_in_B": [],
+  "complete": true
+}

@@ -1,0 +1,2 @@
+annotator,n_queries,mean_p_at_10,mean_strict_p_at_10,mean_ndcg_at_10
+Adjudicated_Consensus,30,0.8,0.46,0.907784

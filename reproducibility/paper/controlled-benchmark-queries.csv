@@ -1,0 +1,31 @@
+query_id,query,omics_type,native_source,topic_family,heldout_terms,expected_constraints
+C01,lupus nephritis renal biopsy RNA-seq,transcriptomics,geo,lupus_nephritis,lupus nephritis;renal biopsy,disease=lupus nephritis; tissue=kidney; assay=RNA-seq
+C02,pancreatic beta-cell endoplasmic reticulum stress transcriptome,transcriptomics,geo,beta_cell_stress,pancreatic beta-cell;endoplasmic reticulum stress,tissue=pancreatic beta cell; process=ER stress; omics=transcriptomics
+C03,endometriosis lesion RNA-seq,transcriptomics,geo,endometriosis,endometriosis;endometrial lesion,disease=endometriosis; tissue=lesion; assay=RNA-seq
+C04,myocardial infarction cardiac transcriptome,transcriptomics,geo,myocardial_infarction,myocardial infarction;cardiac,disease=myocardial infarction; tissue=heart; omics=transcriptomics
+C05,liver cirrhosis single-cell immune atlas,single_cell,cellxgene,liver_cirrhosis,liver cirrhosis;hepatic cirrhosis,disease=cirrhosis; tissue=liver; assay=single-cell
+C06,melanoma tumor-infiltrating lymphocytes scRNA-seq,single_cell,cellxgene,melanoma_til,melanoma;tumor-infiltrating lymphocytes,disease=melanoma; cells=TIL; assay=scRNA-seq
+C07,kidney fibrosis single-nucleus RNA-seq,single_cell,cellxgene,kidney_fibrosis,kidney fibrosis;renal fibrosis,disease=fibrosis; tissue=kidney; assay=snRNA-seq
+C08,placental preeclampsia single-cell transcriptomics,single_cell,cellxgene,preeclampsia,preeclampsia;placental,disease=preeclampsia; tissue=placenta; assay=single-cell
+C09,amyotrophic lateral sclerosis cerebrospinal fluid DIA proteomics,proteomics,pride,als_csf,amyotrophic lateral sclerosis;cerebrospinal fluid,disease=ALS; material=CSF; assay=DIA proteomics
+C10,colorectal cancer phosphoproteomics,proteomics,pride,colorectal_cancer,colorectal cancer;phosphoproteomics,disease=colorectal cancer; omics=phosphoproteomics
+C11,rheumatoid arthritis synovial fluid proteomics,proteomics,pride,rheumatoid_arthritis,rheumatoid arthritis;synovial fluid,disease=rheumatoid arthritis; material=synovial fluid; omics=proteomics
+C12,sepsis plasma proteome,proteomics,pride,sepsis,sepsis,disease=sepsis; material=plasma; omics=proteomics
+C13,non-alcoholic fatty liver disease plasma metabolomics,metabolomics,metabolights,nafld,non-alcoholic fatty liver disease;NAFLD,disease=NAFLD; material=plasma; omics=metabolomics
+C14,chronic kidney disease urine metabolomics,metabolomics,metabolights,ckd,chronic kidney disease;urine,disease=CKD; material=urine; omics=metabolomics
+C15,gestational diabetes serum metabolomics,metabolomics,metabolights,gestational_diabetes,gestational diabetes;serum,disease=gestational diabetes; material=serum; omics=metabolomics
+C16,pancreatic cancer lipidomics,metabolomics,metabolights,pancreatic_cancer,pancreatic cancer,disease=pancreatic cancer; omics=lipidomics
+C17,lupus T-cell DNA methylation,epigenomics,geo,lupus_methylation,lupus;T-cell methylation,disease=lupus; cells=T cells; assay=DNA methylation
+C18,pancreatic islet enhancer H3K27ac ChIP-seq,epigenomics,encode,islet_enhancer,pancreatic islet;H3K27ac,tissue=pancreatic islet; mark=H3K27ac; assay=ChIP-seq
+C19,glioblastoma chromatin accessibility ATAC-seq,epigenomics,geo,glioblastoma_atac,glioblastoma,disease=glioblastoma; assay=ATAC-seq
+C20,preeclampsia placental methylome,epigenomics,geo,preeclampsia_methylome,preeclampsia;placental methylome,disease=preeclampsia; tissue=placenta; assay=methylation
+C21,inherited cardiomyopathy whole-exome sequencing,genomics,ena,cardiomyopathy,inherited cardiomyopathy;cardiomyopathy,disease=cardiomyopathy; assay=WES
+C22,congenital hearing loss whole-genome sequencing,genomics,ena,hearing_loss,congenital hearing loss;deafness,disease=hearing loss; assay=WGS
+C23,familial epilepsy exome sequencing,genomics,ena,epilepsy,familial epilepsy;epilepsy,disease=epilepsy; assay=WES
+C24,long-read sequencing muscular dystrophy,genomics,ena,muscular_dystrophy,muscular dystrophy,disease=muscular dystrophy; assay=long-read sequencing
+C25,necrotizing enterocolitis neonatal gut metagenomics,metagenomics,mgnify,nec,necrotizing enterocolitis;neonatal gut,disease=NEC; biome=neonatal gut; omics=metagenomics
+C26,coral bleaching reef microbiome metagenomics,metagenomics,mgnify,coral_bleaching,coral bleaching;reef microbiome,condition=coral bleaching; biome=coral reef; omics=metagenomics
+C27,chronic rhinosinusitis airway shotgun microbiome,metagenomics,mgnify,rhinosinusitis,chronic rhinosinusitis;airway,disease=chronic rhinosinusitis; biome=airway; assay=shotgun metagenomics
+C28,rheumatoid arthritis synovium multi-omics,multi_omics,geo,ra_multiomics,rheumatoid arthritis;synovium,disease=rheumatoid arthritis; tissue=synovium; omics=multi-omics
+C29,diabetic kidney disease proteogenomics,multi_omics,geo,dkd_proteogenomics,diabetic kidney disease;proteogenomics,disease=diabetic kidney disease; omics=proteogenomics
+C30,ovarian cancer spatial multi-omics,multi_omics,cptac,ovarian_spatial,ovarian cancer;spatial multi-omics,disease=ovarian cancer; assay=spatial multi-omics

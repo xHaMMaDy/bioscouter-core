@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use BioScouter Core, please cite the BioScouter manuscript."
+title: "BioScouter Core: public scientific components for multi-omics dataset discovery"
+authors:
+  - family-names: "Hammad"
+    given-names: "Ibrahim Abdelkarim"
+    email: "i.abdelkarim@nu.edu.eg"
+  - family-names: "Elhefnawy"
+    given-names: "Amr M."
+version: "0.1.0"
+date-released: "2026-07-03"
+repository-code: "https://github.com/xHaMMaDy/bioscouter-core"
+license: "MIT"
+keywords:
+  - "multi-omics"
+  - "bioinformatics"
+  - "federated search"
+  - "dataset discovery"

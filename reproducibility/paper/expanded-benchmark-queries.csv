@@ -1,0 +1,31 @@
+id,query,omics_type,role,notes
+E01,RNA-seq Alzheimer's disease human brain,transcriptomics,expanded_coverage,Neurodegeneration transcriptomics
+E02,RNA-seq breast cancer tumor normal,transcriptomics,expanded_coverage,Cancer transcriptomics
+E03,GTEx liver expression eQTL,transcriptomics,expanded_coverage,Reference expression and eQTL
+E04,spatial transcriptomics breast cancer,transcriptomics,expanded_coverage,Spatial transcriptomics discovery
+E05,single-cell COVID-19 PBMC immune cells,single_cell,expanded_coverage,Immune single-cell disease query
+E06,single-cell human lung atlas,single_cell,expanded_coverage,Reference atlas query
+E07,single-nucleus RNA-seq Alzheimer's cortex,single_cell,expanded_coverage,Single-nucleus neurodegeneration
+E08,TMT proteomics breast cancer,proteomics,expanded_coverage,Quantitative cancer proteomics
+E09,MS proteomics Parkinson's CSF,proteomics,expanded_coverage,Neurodegeneration proteomics
+E10,phosphoproteomics lung cancer,proteomics,expanded_coverage,Post-translational modification proteomics
+E11,DIA proteomics liver disease,proteomics,expanded_coverage,Acquisition-specific proteomics
+E12,metabolomics type 2 diabetes plasma,metabolomics,expanded_coverage,Metabolic disease metabolomics
+E13,lipidomics obesity serum,metabolomics,expanded_coverage,Lipidomics synonym-rich metabolomics
+E14,metabolomics colorectal cancer urine,metabolomics,expanded_coverage,Cancer metabolomics biofluid
+E15,metabolomics Alzheimer's disease brain,metabolomics,expanded_coverage,Neurodegeneration metabolomics
+E16,ATAC-seq mouse neurons,epigenomics,expanded_coverage,Chromatin accessibility
+E17,ChIP-seq H3K27ac human stem cells,epigenomics,expanded_coverage,Histone mark epigenomics
+E18,DNA methylation glioblastoma,epigenomics,expanded_coverage,Methylation cancer query
+E19,WGBS aging human blood,epigenomics,expanded_coverage,Whole-genome bisulfite sequencing
+E20,WGS rare genetic diseases,genomics,expanded_coverage,Rare disease genomics
+E21,whole exome sequencing autism,genomics,expanded_coverage,Exome disease genomics
+E22,cancer genomics TCGA lung adenocarcinoma,genomics,expanded_coverage,Cancer genomics portal query
+E23,ENA SARS-CoV-2 sequencing datasets,genomics,expanded_coverage,Viral genomics
+E24,gut microbiome IBD metagenomics,metagenomics,expanded_coverage,Human gut microbiome
+E25,soil microbiome shotgun metagenomics,metagenomics,expanded_coverage,Environmental metagenomics
+E26,marine microbiome metagenomics,metagenomics,expanded_coverage,Environmental aquatic microbiome
+E27,wastewater metatranscriptomics microbiome,metagenomics,expanded_coverage,Metatranscriptomics microbiome
+E28,multi-omics lung cancer,multi_omics,expanded_coverage,Cancer multi-omics
+E29,CPTAC ovarian cancer proteogenomics,multi_omics,expanded_coverage,Proteogenomics query
+E30,multi-omics Alzheimer's proteogenomics,multi_omics,expanded_coverage,Neurodegeneration multi-omics

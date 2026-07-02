@@ -1,0 +1,263 @@
+
+================ E01 ================
+ 7 PRJNA644384 ena A0 B2 omics=transcriptomics org= samples=0 disease= tissue=
+title: An integrated multi-omics approach identifies epigenetic alterations associated with Alzheimer’s disease
+desc: This SuperSeries is composed of the SubSeries listed below. Overall design: H3K27ac, H3K9ac, H3K122ac, H3K4me1 ChIP-seq and RNA-seq from Younger, Old and AD samples (lateral temporal lobe brains). Refer to individual Series.
+ 9 GSE226507 geo A2 B1 omics=transcriptomics org=Homo sapiens samples=12 disease= tissue=
+title: Systematic characterization of brain cellular crosstalk reveals a novel role for SEMA6D in TREM2-associated microglial function in Alzheimer’s disease
+desc: In this study we characterized the transcriptional effects of SEMA6D treatment in WT and TREM2 KO human induced pluripotent stem cell-derived microglia (iMGL) using RNA-seq.
+
+================ E02 ================
+ 1 GSE237728 geo A1 B2 omics=transcriptomics org=Homo sapiens samples=79 disease= tissue=
+title: miRNA-seq and RNA-seq profiles of breast cancer cell lines
+desc: This SuperSeries is composed of the SubSeries listed below.
+ 4 GSE304485 geo A0 B1 omics=transcriptomics org=Homo sapiens samples=6310 disease= tissue=
+title: Bulk RNA-Seq gene expression profiles from 13 TCGA cancer types and normal tissues for tumor classification
+desc: This dataset includes bulk RNA-Seq gene expression profiles of 6310 samples from 13 cancer types and normal tissues, obtained from The Cancer Genome Atlas (TCGA) and processed using a standardized pipeline. The raw count matrix, initially containing 60,660 genes, was filtered to retain only valid ENTREZ gene identifiers matched via the org.Hs.eg.db annotation package. Genes with zero variance across samples were removed. Normalization was perform
+ 6 GSE281303 geo A1 B2 omics=transcriptomics org=Homo sapiens samples=123 disease= tissue=
+title: Multimodal Genome-wide Survey of Progressing and Non-progressing Breast Ductal Carcinoma In-Situ [RNA-seq]
+desc: Background: Ductal carcinoma in-situ (DCIS) is a pre-invasive form of invasive breast cancer (IBC). Due to improved breast cancer screening, it now accounts for ~25% of all breast cancers. While the treatment success rates are over 90%, this comes at the cost of considerable morbidity, considering that the majority of DCIS never become invasive and our understanding of the molecular changes occurring in DCIS that predispose to invasive disease is
+10 PRJNA195576 ena A2 B1 omics=genomics org=Homo sapiens samples=0 disease= tissue=
+title: MicroRNA expression profile of breast cancer patients with adjacent normal control group.
+desc: To discriminate miRNA expression differences between adjacent normal and tumor tissues of breast cancer. Overall design: 101 breast tumor + 15 adjacent breast normal tissue samples.
+
+================ E05 ================
+ 1 GSE188172 geo A1 B2 omics=single_cell org=Homo sapiens samples=171 disease= tissue=
+title: PBMC single cell transcriptomics of COVID-19 patients
+desc: The COVID-19 is a mild to moderate respiratory tract infection in the majority, but also can cause life-threatening respiratory failure or persistent debilitating symptoms in a subset of patients. However, the mechanism of protective immunity in mild cases and the pathogenesis of severe COVID-19 remain unclear. On the other hand, it has been proposed that the potent anti-inflammatory effects of corticosteroids are beneficial to decrease the fatal
+ 7 GSE155223 geo A1 B2 omics=single_cell org=Homo sapiens samples=18 disease= tissue=
+title: Single-Cell Omics Reveals Dyssynchrony of the Innate and Adaptive Immune System in Progressive COVID-19 [single-cell RNA-seq]
+desc: A dysregulated immune response against the SARS-CoV-2 virus plays a critical role in severe COVID-19. However, the molecular and cellular mechanisms by which the virus causes lethal immunopathology are poorly understood. Here, we utilize multi-omics single-cell analysis to probe dynamic immune responses in patients with stable or progressive manifestations of COVID-19, and assess the effects of tocilizumab, an anti-IL-6 receptor monoclonal antibo
+ 8 GSE196198 geo A1 B2 omics=single_cell org=Homo sapiens samples=100 disease= tissue=
+title: Longitudinal single-cell multiomics data for different severity of COVID-19
+desc: To trace immune responses in COVID-19 patients with severity, we performed in-depth, longitudinal single-cell multiomics involving T-cell receptor (TCR)/B-cell receptor (BCR) sequencing, feature barcoded antibody (Ab) panel detection (i.e., cellular indexing of transcriptomes and epitopes by sequencing, CITE-seq) followed by RNA sequencing in a single-cell resolution.
+ 9 GSE155222 geo A1 B2 omics=single_cell org=Homo sapiens samples=6 disease= tissue=
+title: Single-Cell Omics Reveals Dyssynchrony of the Innate and Adaptive Immune System in Progressive COVID-19 [CITE-seq]
+desc: A dysregulated immune response against the SARS-CoV-2 virus plays a critical role in severe COVID-19. However, the molecular and cellular mechanisms by which the virus causes lethal immunopathology are poorly understood. Here, we utilize multi-omics single-cell analysis to probe dynamic immune responses in patients with stable or progressive manifestations of COVID-19, and assess the effects of tocilizumab, an anti-IL-6 receptor monoclonal antibo
+
+================ E06 ================
+ 8 GSE171668 geo A2 B1 omics=single_cell org=Homo sapiens samples=188 disease= tissue=
+title: COVID-19 tissue atlases reveal SARS-COV-2 pathology and cellular targets
+desc: COVID-19, caused by SARS-CoV-2, can result in acute respiratory distress syndrome and multiple-organ failure, but little is known about its pathophysiology. Here, we generated single-cell atlases of 23 lung, 16 kidney, 15 liver and 18 heart COVID-19 autopsy donor tissue samples, and spatial atlases of 14 lung donors. Integrated computational analysis uncovered substantial remodeling in the lung epithelial, immune and stromal compartments, with ev
+
+================ E07 ================
+ 3 GSE143758 geo A2 B1 omics=transcriptomics org=Mus musculus samples=37 disease= tissue=
+title: Single nuclei RNA-seq of brain of mouse Alzheimer's disease model
+desc: Here we report single nucleus RNA-seq shows in 5xFAD mouse model of AD and WT, showing changes in the composition and state of multiple cell types. In particular, we identified a unique population of disease-associated astrocytes (DAAs) in AD. DAAs appeared at early disease stages and increased in abundance with age. Similar cells were found in aged WT mice and human brains, suggesting they are linked to both genetic and age-related factors.
+ 5 180bff9c-c8a5-4539-b13b-ddbc00d643e6 cellxgene A0 B2 omics=single_cell org=Homo sapiens samples=0 disease= tissue=
+title: Molecular characterization of selectively vulnerable neurons in Alzheimer's Disease
+desc: Single-nuclei RNA sequencing of caudal entorhinal cortex and superior frontal gyrus from individuals spanning the neuropathological progression of AD
+ 6 fcb3d1c1-03d2-41ac-8229-458e072b7a1c cellxgene A2 B1 omics=single_cell org=Homo sapiens samples=0 disease= tissue=
+title: Live Human Microglia Single-cell RNA-seq
+desc: This single-cell RNA-seq data set was generated from live microglia isolated from autopsy and surgically resected human brain tissue, as described in Olah et al. (Nature Communications, 2020). The data set contains 16,245 total cells from 17 individuals, of which 16,099 (99%) are putative microglia (clusters 1-9) and the remaining cells are putative lymphocytes, monocytes, and erythrocytes. The autopsy donors all had Mild Cognitive Impairment or 
+ 7 GSE214244 geo A2 B1 omics=transcriptomics org=Mus musculus samples=8 disease= tissue=
+title: Single nucleus RNA-seq of brain regions showing high-low Abeta plaque pathology in a mouse model of Alzheimer’s disease
+desc: Alzheimer’s Disease (AD) pathology and amyloid-beta plaque deposition progress slowly in the cerebellum compared to other regions, while the entorhinal cortex (EC) is one of the most vulnerable regions. Using a knock-in mouse model (App KI) of preclinical AD, we show that within the cerebellum, the deep cerebellar nuclei (DCN) show particularly low Aβ plaque accumulation. To identify factors that might underlie differences in the progression of A
+ 8 GSE222007 geo A0 B2 omics=transcriptomics org=Homo sapiens samples=40 disease= tissue=
+title: single-nucleus RNA-seq of microvessel-enriched vascular cells and corresponding parenchyma from frontal cortex samples
+desc: Vascular cell types are under-represented in standard single-nucleus RNA-Seq studies of human frozen post-mortem brain tissue. Using a novel microvessel-enrichment procedure allows to obtain highly purified fractions of vascular cell types and their corresponding parenchymal fraction of the same post-mortem brain tissue sample.
+ 9 a3ffde6c-7ad2-498a-903c-d58e732f7470 cellxgene A0 B1 omics=single_cell org=Homo sapiens samples=0 disease= tissue=
+title: Single-nucleus cross-tissue molecular reference maps to decipher disease gene function
+desc: Understanding the function of genes and their regulation in tissue homeostasis and disease requires knowing the cellular context in which genes are expressed in tissues across the body. Single cell genomics allows the generation of detailed cellular atlases in human tissues, but most efforts are focused on single tissue types. Here, we establish a framework for profiling multiple tissues across the human body at single-cell resolution using singl
+
+================ E08 ================
+ 3 PDC000580 cptac A2 B1 omics=proteomics org=Homo sapiens samples=60 disease=Breast Invasive Carcinoma;Other tissue=Breast;Not Reported
+title: PTRC Triple-negative Breast Cancer Mitotic Vulnerability Study - Phosphoproteome
+desc: Breast Invasive Carcinoma;Other phosphoproteome using TMT10 from Clinical Proteomic Tumor Analysis Consortium proteomics study
+ 4 PDC000696 cptac A2 B1 omics=proteomics org=Homo sapiens samples=52 disease=Breast Invasive Carcinoma;Not Reported tissue=Breast;Not Reported
+title: Yonsei Cancer Center - TNBC - Phosphoproteome
+desc: Breast Invasive Carcinoma;Not Reported phosphoproteome using TMT16 from International Cancer Proteogenome Consortium proteomics study
+ 5 PDC000645 cptac A1 B0 omics=proteomics org=Homo sapiens samples=155 disease=Other;Stomach Adenocarcinoma tissue=Stomach
+title: Academia Sinica Gastric Cancer - Proteome
+desc: Other;Stomach Adenocarcinoma proteome using TMT11 from International Cancer Proteogenome Consortium proteomics study
+ 6 PDC000606 cptac A1 B0 omics=proteomics org=Homo sapiens samples=195 disease=Epithelial Neoplasms, NOS;Not Applicable;Other tissue=Gallbladder
+title: SIMM Gallbladder Cancer - Proteome
+desc: Epithelial Neoplasms, NOS;Not Applicable;Other proteome using TMT16 from International Cancer Proteogenome Consortium proteomics study
+ 7 PDC000649 cptac A1 B0 omics=proteomics org=Homo sapiens samples=155 disease=Other;Stomach Adenocarcinoma tissue=Stomach
+title: Academia Sinica Gastric Cancer - Phosphoproteome
+desc: Other;Stomach Adenocarcinoma phosphoproteome using TMT11 from International Cancer Proteogenome Consortium proteomics study
+ 8 PDC000408 cptac A1 B2 omics=proteomics org=Homo sapiens samples=58 disease=Breast Invasive Carcinoma;Other tissue=Breast;Not Reported
+title: PTRC TNBC - Proteome
+desc: Breast Invasive Carcinoma;Other proteome using TMT11 from Clinical Proteomic Tumor Analysis Consortium proteomics study
+ 9 PDC000582 cptac A1 B2 omics=proteomics org=Homo sapiens samples=59 disease=Breast Invasive Carcinoma;Other tissue=Breast
+title: PTRC BRCA CALGB40601 Neoadjuvant Trial - Proteome
+desc: Breast Invasive Carcinoma;Other proteome using TMT16 from Clinical Proteomic Tumor Analysis Consortium proteomics study
+10 PDC000607 cptac A1 B0 omics=proteomics org=Homo sapiens samples=195 disease=Epithelial Neoplasms, NOS;Not Applicable;Other tissue=Gallbladder
+title: SIMM Gallbladder Cancer - Phosphoproteome
+desc: Epithelial Neoplasms, NOS;Not Applicable;Other phosphoproteome using TMT16 from International Cancer Proteogenome Consortium proteomics study
+
+================ E11 ================
+ 4 PXD006512 pride A1 B2 omics=proteomics org=Homo sapiens (human) samples=0 disease=Hepatocellular carcinoma tissue=
+title: Proteome Landscape of Early Stage Hepatocellular Carcinoma Identifies Proteomic Subtypes and New Therapeutic Targets
+desc: Hepatocellular carcinoma (HCC) accounts for approximately 90% of primary liver cancers, the second leading cause of cancer mortality worldwide. Although HCC surgical treatment may be curative in the early stages, its five-year overall survival is only 50-70%. Advances in proteomic technologies have expanded the breadth and depth of cancer proteome characterization. Here, we present the largest characterization effort on proteomic profiling of 222
+ 5 PDC000341 cptac A1 B0 omics=proteomics org=Homo sapiens samples=105 disease=Other;Pancreatic Ductal Adenocarcinoma tissue=Not Reported;Pancreas
+title: CPTAC PDA Discovery Study - DIA Proteome
+desc: Other;Pancreatic Ductal Adenocarcinoma proteome using Label Free from Clinical Proteomic Tumor Analysis Consortium proteomics study
+ 6 PXD008373 pride A1 B2 omics=proteomics org=Homo sapiens (human) samples=0 disease=Hepatocellular carcinoma tissue=
+title: Proteome Landscape of Early Stage Hepatocellular Carcinoma Identifies Proteomic Subtypes and New Therapeutic Targets - Phosphorylation data
+desc: Hepatocellular carcinoma (HCC) accounts for approximately 90% of primary liver cancers, the second leading cause of cancer mortality worldwide. Although HCC surgical treatment may be curative in the early stages, its five-year overall survival is only 50-70%. Advances in proteomic technologies have expanded the breadth and depth of cancer proteome characterization. Here, we present the largest characterization effort on proteomic profiling of 222
+ 8 PDC000200 cptac A2 B0 omics=proteomics org=Homo sapiens samples=110 disease=Clear Cell Renal Cell Carcinoma;Non-Clear Cell Renal Cell Carcinoma tissue=Kidney
+title: CPTAC CCRCC Discovery Study - DIA Proteome
+desc: Clear Cell Renal Cell Carcinoma;Non-Clear Cell Renal Cell Carcinoma proteome using Label Free from Clinical Proteomic Tumor Analysis Consortium proteomics study
+ 9 PDC000411 cptac A2 B0 omics=proteomics org=Homo sapiens samples=110 disease=Clear Cell Renal Cell Carcinoma tissue=Kidney
+title: CPTAC CCRCC Confirmatory Study - DIA Proteome
+desc: Clear Cell Renal Cell Carcinoma proteome using Label Free from Clinical Proteomic Tumor Analysis Consortium proteomics study
+10 PDC000617 cptac A1 B0 omics=proteomics org=Homo sapiens samples=184 disease=Early Onset Gastric Cancer;Other;Stomach Adenocarcinoma tissue=Not Reported;Stomach
+title: CPTAC STAD Study - DIA Ubiquitylome
+desc: Early Onset Gastric Cancer;Other;Stomach Adenocarcinoma ubiquitylome using Label Free from Clinical Proteomic Tumor Analysis Consortium proteomics study
+
+================ E12 ================
+ 2 MSV000100055 massive A1 B0 omics=metabolomics org=Homo sapiens (NCBITaxon:9606); Rattus norvegicus samples=0 disease= tissue=
+title: Untargeted metabolomics of plasma from Gastric Cancer Patients and Healthy Control using LC-MS
+desc: Untargeted metabolomic profiling of plasma samples from Gastric Cancer patients and healthy controls. Data was acquired using LC-MS/MS and processed to generate a feature quantification table for comparative analysis.
+ 8 MSV000099001 massive A1 B0 omics=metabolomics org=Homo sapiens (NCBITaxon:9606) samples=0 disease= tissue=
+title: Toward Minimally Invasive Metabolomics: GC-MS metabolic fingerprints of Dried Blood Microsamples in comparison to Plasma
+desc: Global untargeted profiles of dried blood microsamples were studied in comparison to conventional plasma and blood samples using Gas Chromatography-Mass Spectrometry (GC-MS). Venous blood from 10 healthy, overnight-fasted individuals was collected and used to produce dried microsamples on Whatman cards, Capitainer and Mitra devices. In parallel paired plasma samples were collected. The metabolite extraction protocol was optimized and methanol was
+ 9 MTBLS146 metabolights A1 B0 omics=metabolomics org= samples=0 disease= tissue=
+title: Pregnancy-Induced Metabolic Phenotype Variations in Maternal Plasma
+desc: Metabolic variations occur during normal pregnancy to provide the growing fetus with a supply of nutrients required for its development and to ensure the health of the woman during gestation. Mass spectrometry-based metabolomics was employed to study the metabolic phenotype variations in the maternal plasma that are induced by pregnancy in each of its three trimesters. Nontargeted metabolomics analysis showed that pregnancy significantly altered 
+10 MTBLS191 metabolights A1 B0 omics=metabolomics org= samples=0 disease= tissue=
+title: The use of metabolomics to monitor simultaneous changes in metabolic variables following supramaximal low volume high intensity exercise
+desc: High intensity exercise (HIE) stimulates greater physiological remodeling when compared to workload matched low-moderate intensity exercise. This study utilized an untargeted metabolomics approach to examine the metabolic perturbations that occur following two workload matched supramaximal low volume HIE trials. In a randomized order, 7 untrained males completed two exercise protocols separated by 1 week; (1) HIE150%: 30 x 20 s cycling at 150% VO
+
+================ E13 ================
+ 1 MTBLS495 metabolights A0 B1 omics=metabolomics org= samples=0 disease= tissue=
+title: Absolute quantitative lipidomics reveals lipidome-wide alterations in aging brain (Mouse brain NEG UPLC-MS assay)
+desc: <p><strong>INTRODUCTION:</strong> The absolute quantitation of lipids at the lipidome-wide scale is a challenge but plays an important role in the comprehensive study of lipid metabolism. </p><p><strong>OBJECTIVES:</strong> We aim to develop a high-throughput quantitative lipidomics approach to enable the simultaneous identification and absolute quantification of hundreds of lipids in a single experiment. Then, we will systematically characterize
+ 3 MSV000094962 massive A2 B1 omics=metabolomics org=Homo sapiens (NCBITaxon:9606); Rattus norvegicus samples=0 disease= tissue=
+title: GNPS - Obesity and GDM associated changes in placental and maternal blood lipidomic profile: evidence for sexual dimorphism
+desc: This study assesses fatty acid composition of lipids in matched maternal plasma and placental tissue from lean, obese and gestational diabetes (GDM) women stratified by fetal sex. Obesity and GDM are associated with adverse pregnancy outcomes and program the offspring for cardiometabolic disease in a sexually dimorphic manner. We collected maternal plasma and placental villous tissue following elective cesarean section at term from women who were
+ 9 MSV000097353 massive A1 B0 omics=metabolomics org=Macaca mulatta (NCBITaxon:9544); Rattus norvegicus samples=0 disease= tissue=
+title: Longitudinal Monkey Plasma Metabolomics and Lipidomics
+desc: Caloric restriction (CR) without malnutrition delays aging in diverse species, including primates, with metabolic changes implicated in this process. To facilitate exploration of CR metabolism with aging, we developed a 15-minute LC-MS/MS metabolomics and lipidomics method, leveraging monophasic extractions and wide elution-strength solvents. We analyzed 494 plasma samples collected over 25 years from male and female rhesus monkeys (Macaca mulatt
+
+================ E15 ================
+ 2 MTBLS516 metabolights A1 B0 omics=metabolomics org= samples=0 disease= tissue=
+title: Local and systemic metabolic alterations in brain, plasma, and liver of rats in response to aging and ischemic stroke, as detected by nuclear magnetic resonance (NMR) spectroscopy
+desc: Cerebral ischemia and aging induce local and systemic effects, and impact severity of stroke outcome. We performed comprehensive metabolic profiling to detect metabolites in brain, plasma, and liver as a function of aging and ischemia/reperfusion (IR). Ischemic stroke was induced by middle cerebral artery occlusion. Abundant metabolites were identified and quantified by 1H-NMR. Older rats aged 12 months showed significant changes in metabolic pro
+ 3 MTBLS455 metabolights A0 B1 omics=metabolomics org= samples=0 disease= tissue=
+title: Using an NMR metabolomics approach to investigate the pathogenicity of amyloid-beta and alpha-synuclein
+desc: INTRODUCTION: The pathogenicity at differing points along the aggregation pathway of many fibril-forming proteins associated with neurodegenerative diseases is unclear. Understanding the effect of different aggregation states of these proteins on cellular processes is essential to enhance understanding of diseases and provide future options for diagnosis and therapeutic intervention. </br> OBJECTIVES:To establish a robust method to probe the meta
+ 8 MTBLS217 metabolights A1 B0 omics=metabolomics org= samples=0 disease= tissue=
+title: Global Metabolomic Profiling of Mice Brains following Experimental Infection with the Cyst-Forming Toxoplasma gondii
+desc: The interplay between the Apicomplexan parasite Toxoplasma gondii and its host has been largely studied. However, molecular changes at the metabolic level in the host central nervous system and pathogenesis-associated metabolites during brain infection are largely unexplored. We used a global metabolomics strategy to identify differentially regulated metabolites and affected metabolic pathways in BALB/c mice during infection with T. gondii Pru st
+
+================ E17 ================
+ 5 GSE263337 geo A2 B1 omics=epigenomics org=Homo sapiens samples=16 disease= tissue=
+title: A functional genomics atlas enhanced by convolutional neural networks facilitates clinical interpretation of disease relevant variants in non-coding regulatory elements [ChIP-seq]
+desc: We provide a novel functional genomics atlas of non-coding regulatory elements derived from human neural stem cells (NSCs), using the massively parallel reporter assay ChIP-STARR-seq. ChIP-STARR-seq was performed in NSCs using chromatin immunoprecipitation for H3K27ac, H3K4me1, YY1 and SOX2, and the generated STARR-seq plasmid reporter libraries were profiled for their enhancer activity in H9 derived NSCs and human embryonic stem cells. Subsequen
+ 6 GSE245709 geo A1 B0 omics=epigenomics org=Mus musculus samples=5 disease= tissue=
+title: ChIP-seq analysis of Hand1 and Foxf1 at different stages of directed cardiac differentiation of mouse embryonic stem cells
+desc: ChIP-seq data for candidates identified from targeted screen for cardiac differentiation
+ 8 GSE328191 geo A2 B1 omics=epigenomics org=Homo sapiens samples=80 disease= tissue=
+title: Multiomic profiling of vascular endothelial cell differentiation from human embryonic stem cells [ChIP-seq]
+desc: To investigate gene regulatory dynamics of normal endothelial cell (EC) differentiation at high resolution, an in vitro differentiation system was employed to derive functional vascular ECs from human embryonic stem cells. Human embryonic stem cells, mesodermal cells, and differentiating cells following VEGF-A stimulation at eight time points (1–48 hours), along with internal controls without VEGF-A treatment (referred to as non-ECs), were collec
+ 9 GSE308655 geo A1 B0 omics=epigenomics org=Mus musculus samples=4 disease= tissue=
+title: Gcm1 ChIP-seq of C57BL/6 mouse embryonic stem cells with folate deficiency
+desc: In order to investigate whether folate deficiency affects Gcm1 enrichment and then affecting the activity of Wnt signaling pathway, we performed ChIP-seq of Gcm1 on folate-free embryonic stem cells and normal embryonic stem cells, respectively. Our sequencing data provides a new theoretical basis for the effect of folate on histone modification.
+10 GSE292287 geo A1 B0 omics=epigenomics org=Mus musculus samples=42 disease= tissue=
+title: H3K79 methylation and H3K36 trimethylation synergistically regulate gene expression in pluripotent stem cells [ChIP-Seq]
+desc: In metazoans, nucleosomes harboring H3K79 methylation (H3K79me) deposited by the histone methyltransferase DOT1L decorate actively transcribed genes. Although DOT1L is implicated in transcription regulation and pathogenesis of human diseases such as leukemia and neurological disorders, the role of H3K79me in these biological processes remains elusive. Here, we reveal a novel functional synergism between H3K79me and H3K36 tri-methylation (H3K36me3
+
+================ E18 ================
+ 6 GSE195567 geo A2 B1 omics=epigenomics org=Homo sapiens samples=23 disease= tissue=
+title: DNA methylation array analysis of high-grade gliomas with pleomorphic and pseudopapillary features
+desc: Genomewide DNA methylation array profiling of 23 previously unpublished CNS tumors resolved into a new entity, high-grade glioma with pleomorphic and pseudopapillary features (HPAP). Tumors demonstrate a variety of histologic diagnoses including glioblastoma (GBM), pleomorphic xanthoastrocytoma (PXA), anaplastic ependymoma, and polymorphous low-grade neuroepithelial tumor of the young (PLNTY). The Illumina Infinium EPIC 850k Human DNA Methylation
+
+================ E20 ================
+ 2 PRJNA532328 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Discovery of novel associations between known and unknown pathogenic genetic mutations and rare diseases: A Collage of Case Reports
+desc: A collage of rare disease case reports
+ 3 PRJEB68332 ena A1 B2 omics=genomics org=Homo sapiens samples=0 disease= tissue=
+title: Exploring the genetics of MIS-C and African ancestry using WGS
+desc: The pathogenesis of MIS-C is unknown however, human monogenic predisposing factors have been proposed as the cause. We performed whole genome sequencing (WGS) on 45 MIS-C cases and 15 healthy SARS-CoV-2 exposed children from South Africa and identified 30 rare candidate variants that may contribute to MIS-C.
+ 5 PRJEB36029 ena A0 B1 omics=genomics org= samples=0 disease= tissue=
+title: Canine whole-genome sequences (WGS) that we have generated by the Canine Genetics Centre (CGC).
+desc: Canine whole-genome sequencing (WGS) data provided by the Canine Genetics Centre (CGC) in the UK. All fastq and BAM (aligned to CanFam4 - GCF_011100685.1) files are available to download. Please contact us if you need any further information about any of our samples/data. https://www.canine-genetics.org.uk/
+ 6 PRJNA708138 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Identification of genetic defects in families segregating rare inherited diseases using next generation genomic tools
+desc: This project is aimed at the detection of pathogenic variants in the coding part of the human genome in individuals with rare undiagnosed genetic diseases. For this purpose, we use a next-generation sequencing approach to target the complete coding part (whole exome) of the human genome. The generated reads are aligned to the reference genome to detect changes in the patient DNA.
+ 7 PRJEB13723 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Molecular characterization of three canine models of human rare bone diseases: Caffey, van den Ende-Gupta, and Raine syndromes
+desc: One to two percent of all children are born with a developmental disorder requiring pediatric hospital admissions. For many such syndromes, the molecular pathogenesis remains poorly characterized. Parallel developmental disorders in other species could provide complementary models for human rare diseases by uncovering new candidate genes, improving the understanding of the molecular mechanisms and opening possibilities for therapeutic trials. We 
+ 8 PRJNA1333793 ena A2 B1 omics=genomics org=Homo sapiens samples=0 disease= tissue=
+title: Diagnostic Yield and Genetic Landscape of Rare Pediatric Diseases in Vietnam Identified by Exome Sequencing
+desc: Diagnostic Yield and Genetic Landscape of Rare Pediatric Diseases in Vietnam Identified by Exome Sequencing
+ 9 PRJNA702801 ena A0 B1 omics=transcriptomics org= samples=0 disease= tissue=
+title: Identification of genetic causes of rare diseases in Quebec (PRISMES project)
+desc: The goal of the study is to identify the genetic causes of rare diseases in Quebec (PRISMES project). Families affected with a rare disease are recruited in an interdisciplinary research program designated "Programme de Recherche et Innovation Sur les Maladies rarES" (PRISMES) at the CHU de Quebec - Universite Laval (CHUQC-UL) Research Centre. PRISMES essentially aims to recruit pediatric patients and their affected/unaffected family members as a
+
+================ E21 ================
+ 4 PRJNA1469519 ena A2 B1 omics=transcriptomics org=Homo sapiens samples=0 disease= tissue=
+title: Integrated analysis of whole-exome sequencing and transcriptome profiling in males with autism spectrum disorders
+desc: Autism spectrum disorders (ASD) are a group of neurodevelopmental disorders with high heritability. Recent findings support a highly heterogeneous and complex genetic etiology including rare de novo and inherited mutations or chromosomal rearrangements as well as double or multiple hits. We performed whole-exome sequencing (WES) and blood cell transcriptome by RNAseq in a subset of male patients with idiopathic ASD (n = 36) in order to identify c
+ 5 GSE332947 geo A2 B1 omics=transcriptomics org=Homo sapiens samples=35 disease= tissue=
+title: Integrated analysis of whole-exome sequencing and transcriptome profiling in males with autism spectrum disorders
+desc: Autism spectrum disorders (ASD) are a group of neurodevelopmental disorders with high heritability. Recent findings support a highly heterogeneous and complex genetic etiology including rare de novo and inherited mutations or chromosomal rearrangements as well as double or multiple hits. We performed whole-exome sequencing (WES) and blood cell transcriptome by RNAseq in a subset of male patients with idiopathic ASD (n = 36) in order to identify c
+
+================ E22 ================
+ 2 PRJDB20076 ena A2 B1 omics=genomics org=unidentified samples=0 disease= tissue=
+title: Human lung cancer cell lines (CBX100)
+desc: The lung carcinoma is the most common human malignancy and intractable. Lung carcinomas are generally classified into four histopathological types, adenocarcinoma, squamous cell carcinoma, large-cell carcinoma and small-cell carcinoma. Comparative molecular biological characterizations of these four types were not sufficiently accumulated. We characterized the four histopathological types by gene expression profiling of 8 human lung cancer cell l
+ 3 PRJNA301991 ena A2 B1 omics=genomics org=Homo sapiens samples=0 disease= tissue=
+title: Copy number variations distinguish lung adenocarcinomas from squamous cell carcinomas
+desc: For a number of clinical and biological reasons, the accurate classification of non-small cell lung carcinoma (NSCLC) into adenocarcinoma (ADC) and squamous cell carcinoma (SCC) is essential. DNA-based tests, which are not currently used, are more robust when applied to formalin-fixed paraffin-embedded tissues. To develop a molecular-based classification of NSCLC based on genome wide copy number variations (CNVs), the corresponding TCGA, SPORE an
+ 7 PRJNA121179 ena A2 B1 omics=genomics org=Homo sapiens samples=0 disease= tissue=
+title: Gene expression analysis of human lung cancer and control samples
+desc: PURPOSE The development of reliable gene expression profiling technology is having an increasing impact on our understanding of lung cancer biology. The present study aims to determine whether the phenotypic heterogeneity and genetic diversity of lung cancer are correlated. PATIENTS AND METHODS In this study, microarray analysis was performed in a set of 91 non-small cell lung cancer (NSCLC) samples in order to: establish gene signatures in prima
+ 8 PRJEB40655 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Targeted DNA sequencing of the lung SWI/SNF complex and cancer drivers in lung adenocarcinoma cell lines
+desc: Lung adenocarcinoma (LUAD) is the main subtype of lung cancer, the most frequent and deadliest cancer worldwide. The SWI/SNF complex is a multiprotein complex that is involved in the epigenetic regulation of gene expression. SWI/SNF complex subunits, such as SMARCA4 and ARID1A, are known to be recurrently mutated in LUAD, but the biological function of the SWI/SNF complex and its alterations in LUAD are currently unknown.Here, we first performed 
+10 PRJDB1928 ena A2 B1 omics=epigenomics org=Homo sapiens samples=0 disease= tissue=
+title: Omics catalogue of lung adenocarcinoma cell lines
+desc: Cancer cells carry various types of aberrations at the levels of genome, epigenome and transcriptome. For future studies on the biological relevance of the aberrations and their mutual relations, we generated a multi-omics catalogue of 26 lung adenocarcinoma cell lines. By whole-genome sequencing, we detected SNVs and indels, copy number aberrations and chromosome rearrangements. We used RNA-Seq to examine whether those mutation-harboring genes a
+
+================ E23 ================
+ 1 PRJNA713860 ena A1 B2 omics=metagenomics org= samples=0 disease= tissue=
+title: SARS-CoV-2 Sequencing at Shenandoah University
+desc: Sequence reads generated at Shenandoah University School of Pharmacy for SARS-CoV-2.
+
+================ E24 ================
+ 4 PRJEB81106 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Simultaneous metagenome-informed metaproteomics of the human gut microbiome, host and dietary exposome uncover functional interactomes in health & IBD
+desc: Host-microbiome-dietary interactions play crucial roles in regulating human health, yet direct functional assessment of their interplays, cross-regulations and downstream disease impacts remains challenging. We adopted metagenome-informed metaproteomics (MIM), in both mice and humans, to simultaneously explore host, dietary, and species-level microbiome interactions across diverse scenarios, including commensal and pathogen colonization, nutritio
+
+================ E25 ================
+ 2 PRJEB58067 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Metagenomics approach for taxonomic classification and identification of biosynthetic gene-clusters from soil microbiome.
+desc: This study focuses on taxonomic classification and functional analysis of Natural Agricultural farmland soil microbiome.
+
+================ E26 ================
+ 6 MGYS00004664 mgnify A2 B1 omics=metagenomics org= samples=110 disease= tissue=
+title: marine metagenome Raw sequence reads
+desc: Raw bacterial 16S rRNA sequences from 3 North Atlantic water masses, amended and unamended with high molecular weight organic matter (cruise EN584).
+
+================ E27 ================
+ 4 PRJDB17922 ena A2 B1 omics=genomics org=bioreactor metagenome samples=0 disease= tissue=
+title: Metatranscriptomics of microaerophilic activated sludge for retaining ammonia from high-strength nitrogenous wastewater
+desc: This project contains NGS data obtained by shotgun sequencing. We recently developed a microaerophilic activated sludge (MAS) system for retaining ammonia while removing organic carbon with minimal N2O emissions. A comprehensive understanding of nitrogen metabolisms in the MAS system is essential to optimize a system performance. Here, we employed metagenomics and metatranscriptomics analyses to characterize the microbial community structures and
+ 7 PRJNA1243540 ena A2 B1 omics=genomics org= samples=0 disease= tissue=
+title: Unveiling Metabolic Insights and Niche Differentiation of Microbial Communities in EBPR-Anammox Reactor through Integration of Long-Read Metagenomics and Metatranscriptomics
+desc: In this manuscript, we report niche differentiation among important groups of organisms including polyphosphate accumulating organisms, anaerobic ammonium oxidizers, aerobic ammonium oxidizers, and the interplay between relevant metabolic pathways. Microbes are a vital part of biological wastewater treatment systems in engineered reactors. Although, engineering data incorporating typical water quality parameters could tell the role and engagement
+ 8 PRJNA1145323 ena A2 B1 omics=metagenomics org= samples=0 disease= tissue=
+title: Characterizacion of the anode microbiome of a microbial fuel cell treating real wastewater
+desc: We used amplicon sequencing, metagenomics, and metatranscriptomics to characterize the impact of three salinity levels (3.5, 7, and 15 g/L NaCl) on the anode microbiome of a MFC treating real wastewater at different time points.
+ 9 PRJNA1099306 ena A2 B1 omics=epigenomics org= samples=0 disease= tissue=
+title: Fate and Transport of Antimicrobial Resistance Genes in Algal-bacterial Wastewater Treatment Systems
+desc: The concrete goal of is to invest the algal-bacterial consortia for wastewater treatments and use function-based metagenomic analyses to illustrate the role of algal-bacterial consortia in reduction of antimicrobially resistant microbes and antimicrobial resistance genes (ARGs). Shotgun metagenomics was proposed to be applied to identify antimicrobial resistance ARGs and taxonomic composition throughout the wastewater treatment. In order to link 
+
+================ E28 ================
+ 8 GSE103404 geo A2 B1 omics=transcriptomics org=Homo sapiens samples=64 disease= tissue=
+title: Distinct cancer-promoting stromal gene expression depending on lung function
+desc: Chronic obstructive pulmonary disease (COPD) is an independent risk factor for lung cancer, but the underlying molecular mechanisms are unknown. We hypothesized that lung stromal cells activate pathological gene expression programs supporting oncogenesis. To identify molecular mechanisms operating in the lung stroma that support development of lung cancer. Study subjects included patients with- or without- lung cancer across a spectrum of lung fu
+10 GSE330548 geo A2 B1 omics=transcriptomics org=Mus musculus samples=6 disease= tissue=
+title: Multi-Omics Integration Identifies Critical Molecular Drivers and Alternative Splicing Events in Small Cell Lung Cancer II
+desc: Small cell lung cancer (SCLC) remains a highly aggressive malignancy and a therapeutic challenge in clinical oncology. Here, we conducted an integrated multi-omics analysis of treatment-naïve human SCLC tissues along with paired adjacent tissues (NAT, n = 12), including transcriptomic, proteomic, phosphoproteomic, and glycoproteomic profiling to identify novel prognostic markers and therapeutic targets. Integration of these datasets revealed sign
+
+================ E30 ================
+ 7 PDC000515 cptac A0 B1 omics=proteomics org=Homo sapiens samples=91 disease=Glioblastoma;Other tissue=Brain;Not Applicable
+title: KNCC Glioblastoma Evolution - Phosphoproteome
+desc: Glioblastoma;Other phosphoproteome using TMT11 from International Cancer Proteogenome Consortium proteomics study
+ 9 PDC000514 cptac A0 B1 omics=proteomics org=Homo sapiens samples=111 disease=Glioblastoma;Other tissue=Brain;Not Applicable
+title: KNCC Glioblastoma Evolution - Proteome
+desc: Glioblastoma;Other proteome using TMT11 from International Cancer Proteogenome Consortium proteomics study

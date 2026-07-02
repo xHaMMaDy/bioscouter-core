@@ -1,0 +1,89 @@
+{
+  "project": "BioScouter",
+  "manuscript_version": "v3-concise",
+  "frozen_on": "2026-07-02",
+  "snapshot_type": "manuscript benchmark freeze",
+  "source_code_availability": "The production source code is not publicly released at this stage; reviewer-accessible benchmark inputs, frozen outputs, scoring rubric, and rerun scripts are provided in this reproducibility package.",
+  "notes": [
+    "Counts are frozen from the manuscript benchmark tables and should not be silently replaced by live API reruns.",
+    "Public repository APIs and metadata records change over time.",
+    "The illustrative Alzheimer query is intentionally separate from benchmark query 1."
+  ],
+  "latency_benchmark": [
+    {"id": 1, "query": "RNA-seq Alzheimer's disease", "ttfr_s": 1.46, "ttfr_sd": 0.29, "total_s": 6.60, "total_sd": 1.17, "datasets": 0, "note": "short phrasing failure case"},
+    {"id": 2, "query": "Proteomics breast cancer", "ttfr_s": 1.28, "ttfr_sd": 0.43, "total_s": 27.57, "total_sd": 21.10, "datasets": 128},
+    {"id": 3, "query": "Single-cell COVID-19 immune cells", "ttfr_s": 1.68, "ttfr_sd": 0.01, "total_s": 15.96, "total_sd": 7.38, "datasets": 83},
+    {"id": 4, "query": "Metabolomics type 2 diabetes", "ttfr_s": 0.86, "ttfr_sd": 0.03, "total_s": 17.46, "total_sd": 9.19, "datasets": 102},
+    {"id": 5, "query": "Epigenomic histone maps in stem cells", "ttfr_s": 2.69, "ttfr_sd": 0.45, "total_s": 3.22, "total_sd": 0.50, "datasets": 6},
+    {"id": 6, "query": "Gut microbiome IBD metagenomics", "ttfr_s": 3.85, "ttfr_sd": 0.79, "total_s": 8.72, "total_sd": 0.81, "datasets": 7},
+    {"id": 7, "query": "Multi-omics lung cancer", "ttfr_s": 1.44, "ttfr_sd": 0.28, "total_s": 4.37, "total_sd": 0.96, "datasets": 62},
+    {"id": 8, "query": "WGS rare genetic diseases", "ttfr_s": 1.12, "ttfr_sd": 0.03, "total_s": 2.55, "total_sd": 0.25, "datasets": 10},
+    {"id": 9, "query": "ATAC-seq mouse neurons", "ttfr_s": 2.19, "ttfr_sd": 0.05, "total_s": 2.93, "total_sd": 0.04, "datasets": 50},
+    {"id": 10, "query": "MS proteomics Parkinson's CSF", "ttfr_s": 0.89, "ttfr_sd": 0.06, "total_s": 4.36, "total_sd": 0.09, "datasets": 54}
+  ],
+  "summary": {
+    "median_ttfr_s": 1.49,
+    "median_total_s": 5.38,
+    "total_datasets": 502,
+    "active_sources": 9,
+    "mean_datasets_per_query": 50.2,
+    "specialized_source_contribution_percent": 67.4,
+    "vector_index_size": 2648
+  },
+  "source_contribution": [
+    {"source": "MassIVE", "total_datasets": 150, "queries_with_results": "3/10", "average_per_query": 50.0},
+    {"source": "GEO", "total_datasets": 106, "queries_with_results": "7/10", "average_per_query": 15.1},
+    {"source": "CPTAC", "total_datasets": 104, "queries_with_results": "3/10", "average_per_query": 34.7},
+    {"source": "CellxGene", "total_datasets": 50, "queries_with_results": "1/10", "average_per_query": 50.0},
+    {"source": "MetaboLights", "total_datasets": 50, "queries_with_results": "1/10", "average_per_query": 50.0},
+    {"source": "HCA", "total_datasets": 25, "queries_with_results": "1/10", "average_per_query": 25.0},
+    {"source": "ENA", "total_datasets": 11, "queries_with_results": "2/10", "average_per_query": 5.5},
+    {"source": "MGnify", "total_datasets": 5, "queries_with_results": "1/10", "average_per_query": 5.0},
+    {"source": "GDC", "total_datasets": 1, "queries_with_results": "1/10", "average_per_query": 1.0}
+  ],
+  "portal_comparison": [
+    {"query": "Proteomics breast cancer", "portal_total": 81, "bioscouter_total": 128, "unique_sources": ["CPTAC", "MassIVE", "GEO"]},
+    {"query": "Single-cell COVID-19", "portal_total": 403, "bioscouter_total": 83, "unique_sources": ["CellxGene", "HCA", "GEO"]},
+    {"query": "Metabolomics type 2 diabetes", "portal_total": 62, "bioscouter_total": 102, "unique_sources": ["MetaboLights", "MassIVE", "GEO"]},
+    {"query": "Multi-omics lung cancer", "portal_total": 5059, "bioscouter_total": 62, "unique_sources": ["CPTAC", "GEO", "GDC"]},
+    {"query": "WGS rare diseases", "portal_total": 364, "bioscouter_total": 10, "unique_sources": ["ENA", "GEO"]},
+    {"query": "ATAC-seq mouse neurons", "portal_total": 355, "bioscouter_total": 50, "unique_sources": ["GEO"]},
+    {"query": "MS proteomics Parkinson's CSF", "portal_total": 3, "bioscouter_total": 54, "unique_sources": ["MassIVE", "CPTAC"]}
+  ],
+  "relevance_ranking": [
+    {"query": "Proteomics breast cancer", "mode": "Keyword", "p_at_10": 0.350, "ndcg_at_10": 0.824, "highly_relevant": 2, "irrelevant": 5},
+    {"query": "Proteomics breast cancer", "mode": "Embedding", "p_at_10": 0.350, "ndcg_at_10": 0.824, "highly_relevant": 2, "irrelevant": 5},
+    {"query": "Single-cell COVID-19", "mode": "Keyword", "p_at_10": 0.900, "ndcg_at_10": 0.992, "highly_relevant": 8, "irrelevant": 0},
+    {"query": "Single-cell COVID-19", "mode": "Embedding", "p_at_10": 0.850, "ndcg_at_10": 0.967, "highly_relevant": 7, "irrelevant": 0},
+    {"query": "Metabolomics type 2 diabetes", "mode": "Keyword", "p_at_10": 0.350, "ndcg_at_10": 0.921, "highly_relevant": 1, "irrelevant": 4},
+    {"query": "Metabolomics type 2 diabetes", "mode": "Embedding", "p_at_10": 0.400, "ndcg_at_10": 0.838, "highly_relevant": 2, "irrelevant": 4},
+    {"query": "Multi-omics lung cancer", "mode": "Keyword", "p_at_10": 0.600, "ndcg_at_10": 0.855, "highly_relevant": 4, "irrelevant": 2},
+    {"query": "Multi-omics lung cancer", "mode": "Embedding", "p_at_10": 0.600, "ndcg_at_10": 0.855, "highly_relevant": 4, "irrelevant": 2},
+    {"query": "ATAC-seq mouse neurons", "mode": "Keyword", "p_at_10": 0.300, "ndcg_at_10": 0.988, "highly_relevant": 0, "irrelevant": 4},
+    {"query": "ATAC-seq mouse neurons", "mode": "Embedding", "p_at_10": 0.300, "ndcg_at_10": 0.965, "highly_relevant": 0, "irrelevant": 4}
+  ],
+  "hybrid_search": {
+    "keyword_total": 826,
+    "hybrid_total": 1106,
+    "delta": 280,
+    "delta_percent": 34,
+    "interpretation": "increase in unique candidate retrieval, not independently validated recall"
+  },
+  "vocabulary_mismatch": {
+    "keyword_total": 467,
+    "hybrid_total": 737,
+    "vector_added": 270,
+    "delta_percent": 58,
+    "interpretation": "increase in candidate retrieval for synonym-rich queries"
+  },
+  "illustrative_alzheimer_query": {
+    "query": "RNA-seq datasets for Alzheimer's disease in human brain tissue with more than 100 samples",
+    "datasets": 31,
+    "sources": {"GEO": 16, "ENA": 12, "ENCODE": 3},
+    "source_count": 3,
+    "elapsed_s": 8.2,
+    "average_relevance_percent": 89,
+    "average_samples": 27,
+    "note": "not used for latency query 1; included as workflow demonstration"
+  }
+}

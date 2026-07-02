@@ -1,0 +1,15 @@
+source,query,omics_type
+geo,human RNA-seq tissue expression,transcriptomics
+pride,human mass spectrometry proteomics,proteomics
+metabolights,human plasma metabolomics,metabolomics
+encode,human H3K27ac ChIP-seq,epigenomics
+gdc,TCGA lung cancer genomics,genomics
+cellxgene,human lung single-cell atlas,single_cell
+mgnify,human gut metagenomics,metagenomics
+mgrast,soil shotgun metagenomics,metagenomics
+hca,human immune single-cell atlas,single_cell
+metabolomics_workbench,human serum metabolomics,metabolomics
+cptac,breast cancer proteogenomics,multi_omics
+ena,human whole-genome sequencing,genomics
+massive,human LC-MS proteomics,proteomics
+gtex,human liver gene expression,transcriptomics

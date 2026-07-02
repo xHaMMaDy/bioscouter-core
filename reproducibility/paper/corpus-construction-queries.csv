@@ -1,0 +1,17 @@
+query_id,query,omics_type,purpose
+S01,human tissue RNA sequencing datasets,transcriptomics,disease-agnostic corpus construction
+S02,mouse developmental transcriptome,transcriptomics,disease-agnostic corpus construction
+S03,human mass spectrometry proteomics,proteomics,disease-agnostic corpus construction
+S04,quantitative phosphoproteome profiling,proteomics,disease-agnostic corpus construction
+S05,human plasma metabolomics,metabolomics,disease-agnostic corpus construction
+S06,untargeted tissue lipidomics,metabolomics,disease-agnostic corpus construction
+S07,human chromatin accessibility sequencing,epigenomics,disease-agnostic corpus construction
+S08,histone modification ChIP-seq,epigenomics,disease-agnostic corpus construction
+S09,human whole-exome sequencing,genomics,disease-agnostic corpus construction
+S10,long-read genome sequencing,genomics,disease-agnostic corpus construction
+S11,human single-cell transcriptome atlas,single_cell,disease-agnostic corpus construction
+S12,single-nucleus RNA sequencing,single_cell,disease-agnostic corpus construction
+S13,human gut shotgun metagenomics,metagenomics,disease-agnostic corpus construction
+S14,environmental microbiome sequencing,metagenomics,disease-agnostic corpus construction
+S15,human integrated multi-omics study,multi_omics,disease-agnostic corpus construction
+S16,proteogenomic tumor profiling,multi_omics,disease-agnostic corpus construction

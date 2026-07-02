@@ -1,0 +1,7 @@
+{
+  "n_paired": 300,
+  "exact_percent_agreement": 0.756667,
+  "within_one_category_agreement": 0.983333,
+  "cohens_kappa_unweighted": 0.610722,
+  "cohens_kappa_linear_weighted": 0.670293
+}
