@@ -1,0 +1,2 @@
+new_pooled_records,prior_consensus_records,safely_reused_labels,records_requiring_new_labels,reuse_rule,interpretation
+2348,300,0,2348,exact normalized query plus source plus accession,Relevance labels are query-specific; accession-only reuse is prohibited.

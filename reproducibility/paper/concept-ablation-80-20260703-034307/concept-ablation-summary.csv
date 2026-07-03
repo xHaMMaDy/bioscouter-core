@@ -1,0 +1,81 @@
+query_id,query,omics_type,plain_status,expanded_status,plain_results,expanded_results,shared_results,jaccard_overlap,plain_elapsed_s,expanded_elapsed_s
+T01,asthma airway epithelial RNA-seq,transcriptomics,200,200,10,10,6,0.4286,3.391,3.134
+T02,psoriasis skin lesion transcriptome,transcriptomics,200,200,10,10,10,1.0,5.008,5.01
+T03,renal carcinoma tumor normal RNA-seq,transcriptomics,200,200,10,10,6,0.4286,4.991,5.008
+T04,multiple sclerosis blood transcriptome,transcriptomics,200,200,10,10,9,0.8182,4.994,5.127
+T05,heart failure left ventricle RNA-seq,transcriptomics,200,200,10,10,10,1.0,4.873,5.728
+T06,Parkinson disease substantia nigra transcriptomics,transcriptomics,200,200,10,10,10,1.0,4.273,5.015
+T07,colon organoid inflammatory bowel disease RNA-seq,transcriptomics,200,200,10,10,10,1.0,5.009,5.005
+T08,adipose insulin resistance transcriptome,transcriptomics,200,200,10,10,10,1.0,4.987,5.013
+T09,GTEx pancreas expression QTL,transcriptomics,200,200,10,10,10,1.0,5.228,4.947
+T10,drug treated hepatocyte transcriptome toxicity,transcriptomics,200,200,10,10,9,0.8182,5.064,4.769
+T11,autism brain cortex RNA-seq,transcriptomics,200,200,10,10,0,0.0,5.03,4.972
+T12,tuberculosis macrophage RNA-seq,transcriptomics,200,200,10,10,4,0.25,4.999,5.001
+P01,Alzheimer cerebrospinal fluid proteomics,proteomics,200,200,5,5,5,1.0,10.064,9.582
+P02,breast cancer TMT proteomics tumor normal,proteomics,200,200,10,10,10,1.0,10.029,10.014
+P03,diabetes islet proteomics,proteomics,200,200,10,10,10,1.0,10.047,10.045
+P04,liver cancer phosphoproteomics,proteomics,200,200,10,10,9,0.8182,10.028,10.037
+P05,COVID plasma proteomics,proteomics,200,200,10,10,10,1.0,10.016,10.028
+P06,ovarian cancer proteogenomics CPTAC,proteomics,200,200,10,10,10,1.0,10.024,10.031
+P07,lung adenocarcinoma CPTAC proteomics,proteomics,200,200,10,10,10,1.0,10.052,8.777
+P08,ALS spinal cord proteomics,proteomics,200,200,5,5,5,1.0,8.482,10.04
+P09,cardiomyopathy heart proteomics,proteomics,200,200,10,10,10,1.0,10.045,10.06
+P10,pancreatic cancer secretome proteomics,proteomics,200,200,10,10,10,1.0,10.041,10.033
+P11,MassIVE microbiome proteomics,proteomics,200,200,2,2,2,1.0,10.014,10.03
+P12,rheumatoid arthritis synovium proteomics,proteomics,200,200,4,4,4,1.0,8.488,10.05
+M01,kidney disease urine metabolomics,metabolomics,200,200,9,9,9,1.0,10.049,10.05
+M02,obesity serum lipidomics,metabolomics,200,200,7,7,7,1.0,10.055,10.014
+M03,colorectal cancer fecal metabolomics,metabolomics,200,200,3,3,3,1.0,10.007,10.025
+M04,Parkinson cerebrospinal fluid metabolomics,metabolomics,200,200,3,3,3,1.0,10.059,10.062
+M05,breast cancer tissue metabolomics,metabolomics,200,200,5,5,5,1.0,10.03,10.056
+M06,preterm birth cord blood metabolomics,metabolomics,200,200,3,3,3,1.0,10.057,10.007
+M07,metabolomics workbench diabetes muscle,metabolomics,200,200,2,2,2,1.0,10.053,10.049
+M08,asthma exhaled breath metabolomics,metabolomics,200,200,0,0,0,1.0,9.712,10.025
+M09,NAFLD liver metabolomics,metabolomics,200,200,4,4,4,1.0,10.062,10.051
+M10,sepsis plasma metabolomics,metabolomics,200,200,1,1,1,1.0,10.032,10.055
+S01,liver cirrhosis single-cell atlas,single_cell,200,200,10,10,5,0.3333,8.557,0.713
+S02,melanoma T cell scRNA-seq,single_cell,200,200,10,10,0,0.0,1.02,0.788
+S03,kidney fibrosis single-nucleus RNA-seq,single_cell,200,200,10,10,4,0.25,1.589,0.637
+S04,ulcerative colitis colon single-cell,single_cell,200,200,10,10,10,1.0,1.194,1.25
+S05,pancreatic islet single-cell diabetes,single_cell,200,200,10,10,10,1.0,1.405,1.495
+S06,lung fibrosis single-cell fibroblast,single_cell,200,200,10,10,10,1.0,2.027,1.173
+S07,placenta preeclampsia single-cell transcriptomics,single_cell,200,200,10,10,2,0.1111,1.213,0.61
+S08,brain organoid single-cell development,single_cell,200,200,10,10,4,0.25,1.196,0.682
+S09,COVID lung single-cell immune atlas,single_cell,200,429,10,0,0,0.0,1.662,0.003
+S10,mouse retina single-cell atlas,single_cell,429,429,0,0,0,1.0,0.003,0.002
+G01,rare disease whole genome sequencing,genomics,429,429,0,0,0,1.0,0.014,0.014
+G02,autism exome sequencing families,genomics,429,429,0,0,0,1.0,0.016,0.015
+G03,epilepsy trio whole exome sequencing,genomics,429,429,0,0,0,1.0,0.002,0.014
+G04,breast cancer whole genome sequencing,genomics,429,429,0,0,0,1.0,0.014,0.015
+G05,acute myeloid leukemia genomics TCGA,genomics,429,429,0,0,0,1.0,0.002,0.002
+G06,SARS-CoV-2 sequencing wastewater,genomics,429,429,0,0,0,1.0,0.028,0.002
+G07,mitochondrial disease genome sequencing,genomics,429,429,0,0,0,1.0,0.028,0.015
+G08,long read sequencing structural variants,genomics,429,429,0,0,0,1.0,0.015,0.015
+G09,prostate cancer genomics TCGA,genomics,429,429,0,0,0,1.0,0.016,0.015
+G10,congenital heart disease exome sequencing,genomics,429,429,0,0,0,1.0,0.016,0.002
+EPI01,H3K27ac enhancer ChIP-seq breast cancer,epigenomics,429,429,0,0,0,1.0,0.002,0.002
+EPI02,ATAC-seq glioblastoma tumor,epigenomics,429,429,0,0,0,1.0,0.002,0.002
+EPI03,DNA methylation lupus T cells,epigenomics,429,429,0,0,0,1.0,0.022,0.015
+EPI04,placenta preeclampsia methylation array,epigenomics,429,429,0,0,0,1.0,0.015,0.015
+EPI05,colon cancer chromatin accessibility,epigenomics,429,429,0,0,0,1.0,0.016,0.015
+EPI06,stem cell H3K4me3 ChIP-seq,epigenomics,429,429,0,0,0,1.0,0.015,0.002
+EPI07,aging blood DNA methylation,epigenomics,429,429,0,0,0,1.0,0.014,0.016
+EPI08,neuronal differentiation ATAC-seq,epigenomics,429,429,0,0,0,1.0,0.016,0.014
+MG01,crohn disease gut microbiome metagenomics,metagenomics,429,429,0,0,0,1.0,0.016,0.015
+MG02,preterm infant stool metagenomics,metagenomics,429,429,0,0,0,1.0,0.016,0.016
+MG03,coral reef bleaching metagenomics,metagenomics,429,429,0,0,0,1.0,0.015,0.015
+MG04,soil drought microbiome metagenomics,metagenomics,429,429,0,0,0,1.0,0.017,0.013
+MG05,airway cystic fibrosis microbiome,metagenomics,429,429,0,0,0,1.0,0.017,0.014
+MG06,marine plankton metagenomics,metagenomics,429,429,0,0,0,1.0,0.002,0.002
+MG07,antibiotic treated mouse gut metagenomics,metagenomics,429,429,0,0,0,1.0,0.027,0.016
+MG08,MG-RAST wastewater microbiome,metagenomics,429,429,0,0,0,1.0,0.003,0.029
+MO01,rheumatoid arthritis synovium multi-omics,multi_omics,429,429,0,0,0,1.0,0.015,0.002
+MO02,diabetic kidney disease proteogenomics,multi_omics,429,429,0,0,0,1.0,0.002,0.003
+MO03,ovarian cancer spatial multi-omics,multi_omics,429,429,0,0,0,1.0,0.002,0.002
+MO04,lung cancer proteogenomics CPTAC,multi_omics,429,429,0,0,0,1.0,0.021,0.014
+MO05,Alzheimer multi-omics brain proteogenomics,multi_omics,429,429,0,0,0,1.0,0.002,0.002
+MO06,breast cancer methylome transcriptome multi-omics,multi_omics,429,429,0,0,0,1.0,0.002,0.002
+MO07,sepsis transcriptome proteome multi-omics,multi_omics,429,429,0,0,0,1.0,0.023,0.005
+MO08,IBD microbiome metabolome multi-omics,multi_omics,429,429,0,0,0,1.0,0.004,0.005
+MO09,pediatric brain tumor multi-omics,multi_omics,429,429,0,0,0,1.0,0.005,0.002
+MO10,pancreatic cancer single-cell multi-omics,multi_omics,429,429,0,0,0,1.0,0.003,0.004

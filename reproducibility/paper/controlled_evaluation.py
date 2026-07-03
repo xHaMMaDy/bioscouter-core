@@ -68,13 +68,14 @@ def normalized_text(value: str) -> str:
 def validate_inputs(
     query_path: Path = CONTROLLED_QUERIES,
     corpus_path: Path = CORPUS_QUERIES,
+    expected_query_count: int | None = 30,
 ) -> dict[str, Any]:
     queries = read_csv(query_path)
     corpus_queries = read_csv(corpus_path)
     errors: list[str] = []
 
-    if len(queries) != 30:
-        errors.append(f"Expected 30 controlled queries, found {len(queries)}")
+    if expected_query_count is not None and len(queries) != expected_query_count:
+        errors.append(f"Expected {expected_query_count} controlled queries, found {len(queries)}")
     if len({row.get("query_id") for row in queries}) != len(queries):
         errors.append("Controlled query IDs must be unique")
     if len({row.get("topic_family") for row in queries}) != len(queries):
@@ -123,6 +124,16 @@ def validate_inputs(
         "corpus_query_sha256": sha256_file(corpus_path),
     }
     return result
+
+
+def median(values: list[float]) -> float | None:
+    if not values:
+        return None
+    ordered = sorted(values)
+    mid = len(ordered) // 2
+    if len(ordered) % 2:
+        return round(ordered[mid], 3)
+    return round((ordered[mid - 1] + ordered[mid]) / 2, 3)
 
 
 def request_json(
@@ -357,7 +368,7 @@ def build_corpus(
                 "response": raw,
             }
         )
-        print(f"corpus {row['query_id']} status={status} records={len(records)}")
+        print(f"corpus {row['query_id']} status={status} records={len(records)}", flush=True)
         if delay_s:
             time.sleep(delay_s)
     corpus_records = deduplicate(corpus_records)
@@ -466,8 +477,140 @@ def pool_results(
             writer.writerows(rows)
 
 
+def write_system_summaries(run_rows: list[dict[str, Any]], out_dir: Path, top_k: int) -> None:
+    normalized_rows: list[dict[str, Any]] = []
+    summary_rows: list[dict[str, Any]] = []
+    by_system: dict[str, list[dict[str, Any]]] = {}
+    for run in run_rows:
+        by_system.setdefault(run["system"], []).append(run)
+        for rank, record in enumerate(run["records"][:top_k], start=1):
+            normalized_rows.append(
+                {
+                    "query_id": run["query_id"],
+                    "system": run["system"],
+                    "rank": rank,
+                    "status": run["status"],
+                    "elapsed_s": run["elapsed_s"],
+                    "record_key": record.get("record_key", ""),
+                    "accession": record.get("accession", ""),
+                    "source": record.get("source", ""),
+                    "title": record.get("title", ""),
+                    "omics_type": record.get("omics_type", ""),
+                    "organism": record.get("organism", ""),
+                    "sample_count": record.get("sample_count", ""),
+                    "relevance_score": record.get("relevance_score", ""),
+                    "source_url": record.get("source_url", ""),
+                }
+            )
+
+    for system, rows in by_system.items():
+        elapsed = [float(row["elapsed_s"]) for row in rows if isinstance(row.get("elapsed_s"), (int, float))]
+        record_keys = {
+            record.get("record_key", "")
+            for row in rows
+            for record in row.get("records", [])
+            if record.get("record_key")
+        }
+        sources = {
+            record.get("source", "")
+            for row in rows
+            for record in row.get("records", [])
+            if record.get("source")
+        }
+        timing_scopes = sorted(
+            {
+                str(row.get("timing_scope", "")).strip()
+                for row in rows
+                if str(row.get("timing_scope", "")).strip()
+            }
+        )
+        summary_rows.append(
+            {
+                "system": system,
+                "queries": len(rows),
+                "successful_queries": sum(1 for row in rows if row.get("status") == 200),
+                "failed_queries": sum(1 for row in rows if row.get("status") != 200),
+                "queries_with_results": sum(1 for row in rows if row.get("records")),
+                "zero_result_queries": sum(1 for row in rows if not row.get("records")),
+                "top_k": top_k,
+                "returned_topk_records": sum(len(row.get("records", [])) for row in rows),
+                "unique_records": len(record_keys),
+                "observed_sources": len(sources),
+                "median_elapsed_s": median(elapsed),
+                "mean_elapsed_s": round(sum(elapsed) / len(elapsed), 3) if elapsed else None,
+                "timing_scope": ";".join(timing_scopes) or "legacy_request_elapsed",
+            }
+        )
+
+    normalized_fields = [
+        "query_id",
+        "system",
+        "rank",
+        "status",
+        "elapsed_s",
+        "record_key",
+        "accession",
+        "source",
+        "title",
+        "omics_type",
+        "organism",
+        "sample_count",
+        "relevance_score",
+        "source_url",
+    ]
+    with (out_dir / "normalized-top10-results.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=normalized_fields)
+        writer.writeheader()
+        writer.writerows(normalized_rows)
+
+    summary_fields = [
+        "system",
+        "queries",
+        "successful_queries",
+        "failed_queries",
+        "queries_with_results",
+        "zero_result_queries",
+        "top_k",
+        "returned_topk_records",
+        "unique_records",
+        "observed_sources",
+        "median_elapsed_s",
+        "mean_elapsed_s",
+        "timing_scope",
+    ]
+    with (out_dir / "system-summary.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=summary_fields)
+        writer.writeheader()
+        writer.writerows(summary_rows)
+
+    ablation_systems = {
+        "bioscouter_keyword",
+        "bioscouter_embedding",
+        "bioscouter_hybrid",
+    }
+    with (out_dir / "ablation-summary.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=summary_fields)
+        writer.writeheader()
+        writer.writerows([row for row in summary_rows if row["system"] in ablation_systems])
+
+    baseline_systems = {
+        "bioscouter_hybrid",
+        "native_source_api",
+        "omicsdi",
+    }
+    with (out_dir / "baseline-comparison-summary.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=summary_fields)
+        writer.writeheader()
+        writer.writerows([row for row in summary_rows if row["system"] in baseline_systems])
+
+
 def run_controlled(args: argparse.Namespace) -> int:
-    validation = validate_inputs(Path(args.queries), Path(args.corpus_queries))
+    expected_query_count = None if args.expected_query_count < 1 else args.expected_query_count
+    validation = validate_inputs(
+        Path(args.queries),
+        Path(args.corpus_queries),
+        expected_query_count=expected_query_count,
+    )
     if not validation["valid"]:
         print(json.dumps(validation, indent=2))
         return 2
@@ -515,15 +658,18 @@ def run_controlled(args: argparse.Namespace) -> int:
                 "system": "bioscouter_keyword",
                 "status": status,
                 "elapsed_s": round(elapsed, 3),
+                "timing_scope": "source_search_request",
                 "records": keyword_records[: args.top_k],
             }
         )
 
+        embedding_started = time.perf_counter()
         embedding_records = ranker.rank(
             row["query"],
             keyword_records,
             top_k=args.top_k,
         )
+        embedding_elapsed = time.perf_counter() - embedding_started
         for record in embedding_records:
             record["system"] = "bioscouter_embedding"
         run_rows.append(
@@ -531,11 +677,13 @@ def run_controlled(args: argparse.Namespace) -> int:
                 "query_id": row["query_id"],
                 "system": "bioscouter_embedding",
                 "status": status,
-                "elapsed_s": round(elapsed, 3),
+                "elapsed_s": round(elapsed + embedding_elapsed, 3),
+                "timing_scope": "source_search_plus_embedding_rerank",
                 "records": embedding_records,
             }
         )
 
+        hybrid_started = time.perf_counter()
         semantic_records = ranker.rank(
             row["query"],
             corpus_records,
@@ -548,6 +696,7 @@ def run_controlled(args: argparse.Namespace) -> int:
             hybrid_candidates,
             top_k=args.top_k,
         )
+        hybrid_elapsed = time.perf_counter() - hybrid_started
         for record in hybrid_records:
             record["system"] = "bioscouter_hybrid"
         run_rows.append(
@@ -555,7 +704,8 @@ def run_controlled(args: argparse.Namespace) -> int:
                 "query_id": row["query_id"],
                 "system": "bioscouter_hybrid",
                 "status": status,
-                "elapsed_s": round(elapsed, 3),
+                "elapsed_s": round(elapsed + hybrid_elapsed, 3),
+                "timing_scope": "source_search_plus_frozen_semantic_and_hybrid_rerank",
                 "records": hybrid_records,
             }
         )
@@ -578,6 +728,7 @@ def run_controlled(args: argparse.Namespace) -> int:
                 "system": "native_source_api",
                 "status": native_status,
                 "elapsed_s": round(native_elapsed, 3),
+                "timing_scope": "designated_source_adapter_request",
                 "records": native_records,
             }
         )
@@ -596,6 +747,7 @@ def run_controlled(args: argparse.Namespace) -> int:
                 "system": "omicsdi",
                 "status": omicsdi_status,
                 "elapsed_s": round(omicsdi_elapsed, 3),
+                "timing_scope": "omicsdi_api_request",
                 "records": omicsdi_records,
             }
         )
@@ -610,12 +762,37 @@ def run_controlled(args: argparse.Namespace) -> int:
         )
         print(
             f"{row['query_id']} BioScouter={len(keyword_records)} "
-            f"native={len(native_records)} OmicsDI={len(omicsdi_records)}"
+            f"native={len(native_records)} OmicsDI={len(omicsdi_records)}",
+            flush=True,
         )
         if args.delay_s:
             time.sleep(args.delay_s)
 
     run_path = out_dir / "system_runs.json"
+    config_path = out_dir / "benchmark_run_config.json"
+    write_json(
+        config_path,
+        {
+            "created_at": created.isoformat(),
+            "base_url": args.base_url,
+            "query_file": str(Path(args.queries).resolve()),
+            "query_count": len(queries),
+            "query_sha256": validation["query_sha256"],
+            "corpus_query_file": str(Path(args.corpus_queries).resolve()),
+            "corpus_query_sha256": validation["corpus_query_sha256"],
+            "corpus_file": str(corpus_path.resolve()),
+            "corpus_sha256": sha256_file(corpus_path),
+            "top_k": args.top_k,
+            "candidate_depth": args.candidate_depth,
+            "semantic_depth": args.semantic_depth,
+            "corpus_max_results": args.corpus_max_results,
+            "embedding_model": args.embedding_model,
+            "systems": SYSTEMS,
+            "production_vector_index_used": False,
+            "auto_index_results": False,
+            "concept_expansion": False,
+        },
+    )
     write_json(
         run_path,
         {
@@ -633,13 +810,19 @@ def run_controlled(args: argparse.Namespace) -> int:
     )
     write_json(out_dir / "raw_responses.json", raw_responses)
     pool_results(queries, run_rows, out_dir, top_k=args.top_k)
+    write_system_summaries(run_rows, out_dir, top_k=args.top_k)
 
     manifest_files = [
         Path(args.queries),
         Path(args.corpus_queries),
         corpus_path,
+        config_path,
         run_path,
         out_dir / "raw_responses.json",
+        out_dir / "normalized-top10-results.csv",
+        out_dir / "system-summary.csv",
+        out_dir / "ablation-summary.csv",
+        out_dir / "baseline-comparison-summary.csv",
         out_dir / "pool_mapping.csv",
         out_dir / "annotator_A_blinded.csv",
         out_dir / "annotator_B_blinded.csv",
@@ -665,6 +848,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reviewer-token")
     parser.add_argument("--queries", default=str(CONTROLLED_QUERIES))
     parser.add_argument("--corpus-queries", default=str(CORPUS_QUERIES))
+    parser.add_argument("--expected-query-count", type=int, default=30)
     parser.add_argument("--corpus")
     parser.add_argument("--out-dir")
     parser.add_argument("--top-k", type=int, default=10)
@@ -681,7 +865,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_parser().parse_args()
-    validation = validate_inputs(Path(args.queries), Path(args.corpus_queries))
+    expected_query_count = None if args.expected_query_count < 1 else args.expected_query_count
+    validation = validate_inputs(
+        Path(args.queries),
+        Path(args.corpus_queries),
+        expected_query_count=expected_query_count,
+    )
     if args.validate_only:
         print(json.dumps(validation, indent=2))
         return 0 if validation["valid"] else 2

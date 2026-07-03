@@ -1,0 +1,2 @@
+queries,plain_successful_queries,expanded_successful_queries,plain_total_results,expanded_total_results,mean_result_delta,median_result_delta,queries_with_more_results,queries_with_fewer_results,queries_with_same_count,median_jaccard_overlap,median_plain_elapsed_s,median_expanded_elapsed_s
+80,43,42,343,333,-0.125,0.0,0,1,79,1.0,1.204,0.659

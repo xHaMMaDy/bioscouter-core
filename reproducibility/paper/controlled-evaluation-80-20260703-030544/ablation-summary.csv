@@ -1,0 +1,4 @@
+system,queries,successful_queries,failed_queries,queries_with_results,zero_result_queries,top_k,returned_topk_records,unique_records,observed_sources,median_elapsed_s,mean_elapsed_s,timing_scope
+bioscouter_keyword,80,80,0,70,10,10,667,583,9,9.317,11.921,legacy_source_request_elapsed_only
+bioscouter_embedding,80,80,0,70,10,10,667,616,10,9.317,11.921,legacy_source_request_elapsed_only
+bioscouter_hybrid,80,80,0,80,0,10,800,704,11,9.317,11.921,legacy_source_request_elapsed_only

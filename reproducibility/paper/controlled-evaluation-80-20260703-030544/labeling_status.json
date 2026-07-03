@@ -1,0 +1,10 @@
+{
+  "new_pooled_records": 2348,
+  "prior_consensus_records": 300,
+  "safely_reused_labels": 0,
+  "records_requiring_new_labels": 2348,
+  "reuse_rule": "exact normalized query plus source plus accession",
+  "interpretation": "Relevance labels are query-specific; accession-only reuse is prohibited.",
+  "independent_metrics_available": false,
+  "reason": "The 80-query pool requires new query-specific labels. Existing 30-query adjudicated metrics remain separate."
+}

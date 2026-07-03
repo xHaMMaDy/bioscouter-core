@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-07-03T00:05:44.948158+00:00",
+  "validation": {
+    "valid": true,
+    "controlled_queries": 80,
+    "corpus_queries": 16,
+    "omics_types": [
+      "epigenomics",
+      "genomics",
+      "metabolomics",
+      "metagenomics",
+      "multi_omics",
+      "proteomics",
+      "single_cell",
+      "transcriptomics"
+    ],
+    "errors": [],
+    "query_sha256": "bf6a39f0776b5ac0ae01e05232d463dcc3faca74311af32fdd8174839ddbb962",
+    "corpus_query_sha256": "bd934065eb8a114f0ef3b448d738f5bc4425fcdfe88e84838f2b0b918a02c9c9"
+  },
+  "files": {
+    "benchmark-queries-80.csv": {
+      "sha256": "bf6a39f0776b5ac0ae01e05232d463dcc3faca74311af32fdd8174839ddbb962",
+      "bytes": 19531
+    },
+    "corpus-construction-queries.csv": {
+      "sha256": "bd934065eb8a114f0ef3b448d738f5bc4425fcdfe88e84838f2b0b918a02c9c9",
+      "bytes": 1414
+    },
+    "ablation-summary.csv": {
+      "sha256": "5096ea86d374ea1b18c26a12ebdc109e071346e8ec5eff6a966335373dc2c5f3",
+      "bytes": 483
+    },
+    "annotator_A_blinded.csv": {
+      "sha256": "9455f227d142cdcb9d666084b542076a015ac355fd260b5be9fe779561bfe5fc",
+      "bytes": 2301709
+    },
+    "annotator_B_blinded.csv": {
+      "sha256": "484c87adbf1ab7f070b5ed87295bf05aaa1203d18be01a8f65139f879ac72689",
+      "bytes": 2301709
+    },
+    "baseline-comparison-summary.csv": {
+      "sha256": "50469762ee39eb64a1fb89fbd85340a3b991eaf8526124c441706e4ce8b9a760",
+      "bytes": 466
+    },
+    "benchmark-analysis.json": {
+      "sha256": "eb691067602f2f8438b95e10daf86f63311037c808f5978aeffc0bbff522ef89",
+      "bytes": 3397
+    },
+    "benchmark-analysis.md": {
+      "sha256": "880825fae65059ab7d5923530f8abe57e7f5ae955587ada4294bbd3ca94f4e9a",
+      "bytes": 1161
+    },
+    "benchmark_run_config.json": {
+      "sha256": "20f3a619b91f4c68b71a36ce1d4495501d8f3e126b42fa3fbba97271d703c43f",
+      "bytes": 1314
+    },
+    "controlled-corpus.json": {
+      "sha256": "5505662da0ca0ebe96e1462e54194bcdf2f71b8c7436519c2a47da99a03825f0",
+      "bytes": 8944505
+    },
+    "label_reuse_report.csv": {
+      "sha256": "4e6f639c1aea131bfda200e4b782c2f33ffb1b25b53da88cca9f0b13881ffa89",
+      "bytes": 260
+    },
+    "labeling_status.json": {
+      "sha256": "70292269440a87c15c5084f1850b86cee9991e49d2582236a0834255818c12fa",
+      "bytes": 477
+    },
+    "normalized-top10-results.csv": {
+      "sha256": "e8464433ceb78745caba05429d0d1ee62cd9ba9522c878fe040369b2c0095086",
+      "bytes": 836429
+    },
+    "pool_mapping.csv": {
+      "sha256": "03319f7457da7da3d51e8f7f65b8c0bc7aa0c8a7905f04ea097770f9867a8636",
+      "bytes": 203909
+    },
+    "pooled_top10_for_labeling.csv": {
+      "sha256": "669e202d57cfdf4acb0813e28e4d931d0b2b2f545f42598f727d6b492ceb7e72",
+      "bytes": 2348705
+    },
+    "raw_responses.json": {
+      "sha256": "3f1233ab6f38b7b017b254aff40320b3d3a0e55c2beeb33f980db73a6626a413",
+      "bytes": 29164035
+    },
+    "reused_labels.csv": {
+      "sha256": "7bb81419fef60524e5a06e9ebb34aadf258ebb24084f7203f12cd54a420771a4",
+      "bytes": 236
+    },
+    "system-summary.csv": {
+      "sha256": "d549c4ead9d80aba2b5114cd618b01b1538e90aa3f690ffd1a0a55e449904e8c",
+      "bytes": 659
+    },
+    "system_runs.json": {
+      "sha256": "3d0796ec4bf37976f9463def9eb94fb2f64f62eee4a0ffa3e4bf8abb69402ecc",
+      "bytes": 4126061
+    }
+  }
+}

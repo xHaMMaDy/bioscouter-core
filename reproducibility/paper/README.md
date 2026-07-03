@@ -1,15 +1,23 @@
 # BioScouter Manuscript Reproducibility Package
 
 This folder freezes the benchmark evidence used by the v3 concise manuscript.
-It is intended to be archived with a DOI before journal submission.
+The public scientific core and reproducibility snapshot are available at
+https://github.com/xHaMMaDy/bioscouter-core and archived on Zenodo at
+https://doi.org/10.5281/zenodo.21143417.
 
 ## Files
 
 - `benchmark-queries.csv` - legacy ten-query snapshot retained for audit history; not the primary controlled validation panel.
 - `benchmark-freeze.json` - legacy frozen snapshot retained so older manuscript numbers can be traced and removed or replaced.
-- `controlled-benchmark-queries.csv` - primary 30-query held-out evaluation panel.
+- `controlled-benchmark-queries.csv` - 30-query held-out panel used for the completed independent relevance assessment.
+- `benchmark-queries-80.csv` - broader 80-query controlled baseline and ranking-ablation panel across eight omics categories.
 - `corpus-construction-queries.csv` - independent corpus-building queries used before held-out evaluation.
 - `controlled_evaluation.py` - leakage-resistant controlled evaluation runner and annotation-pool generator.
+- `controlled-evaluation-80-*/system-summary.csv` - per-system completion, returned top-10 count, unique-record count, observed-source count, and latency summary.
+- `controlled-evaluation-80-*/benchmark_run_config.json` and `run_manifest.json` - exact run parameters, query/corpus hashes, and artifact checksums.
+- `controlled-evaluation-80-*/baseline-comparison-summary.csv` - BioScouter hybrid, designated native-source, and OmicsDI comparison rows.
+- `controlled-evaluation-80-*/ablation-summary.csv` - keyword-only, frozen-corpus embedding-only, and hybrid ranking conditions.
+- `controlled-evaluation-80-*/normalized-top10-results.csv` - normalized ranked records used to audit system outputs.
 - `relevance-rubric.md` - manual relevance-labeling rubric used for P@10, nDCG@10, MRR, agreement, and adjudication.
 - `rerun_benchmark.py` - helper script for rerunning the query set against a local or deployed BioScouter API.
 - `expanded-benchmark-queries.csv` - 30-query expanded coverage panel spanning transcriptomics, proteomics, metabolomics, epigenomics, genomics, single-cell, metagenomics, and multi-omics.
@@ -17,9 +25,14 @@ It is intended to be archived with a DOI before journal submission.
 - `expanded-benchmark-*/expanded-benchmark-freeze.json` - dated live expanded benchmark output.
 - `expanded-benchmark-*/annotator_A_top10.csv` and `annotator_B_top10.csv` - independent relevance-labeling sheets.
 - `score_relevance_labels.py` - computes P@10, nDCG@10, percent agreement, Cohen's kappa, and an adjudication sheet after annotator labels are filled.
+- `prepare_label_reuse.py` - creates the 80-query pooled labeling file and reuses a prior consensus label only when normalized query, source, and accession all match exactly.
+- `analyze_benchmark_upgrade.py` - applies the predeclared completion gates and writes a benchmark analysis without inferring relevance from counts.
 - `independent-labeling-protocol.md` - protocol for the two-annotator relevance check.
 - `run_source_reliability.py` - cold/warm live-source reliability runner.
 - `run_concept_ablation.py` - paired runner comparing candidate sets with and without deterministic concept expansion.
+- `concept-ablation-*/concept-ablation-summary.csv` - per-query off/on counts, overlap, and elapsed time.
+- `concept-ablation-*/concept-ablation-aggregate.csv` - aggregate paired candidate-set summary.
+- `concept-ablation-*/concept-ablation-raw.json` and `run_manifest.json` - raw responses and file checksums.
 - `usability-ethics-protocol.md` - optional ethics-ready usability protocol; no usability results are claimed until participant data exist.
 
 ## Important Interpretation Note
@@ -44,7 +57,7 @@ python BioScouter_Paper\v3-concise\reproducibility\rerun_benchmark.py --base-url
 If authentication is required:
 
 ```powershell
-python BioScouter_Paper\v3-concise\reproducibility\rerun_benchmark.py --base-url http://127.0.0.1:8001 --token "<AUTH_TOKEN>"
+python BioScouter_Paper\v3-concise\reproducibility\rerun_benchmark.py --base-url http://127.0.0.1:8001 --token "<JWT>"
 ```
 
 The script writes a timestamped JSON rerun file beside this README. Compare that
@@ -61,12 +74,21 @@ python BioScouter_Paper\v3-concise\reproducibility\controlled_evaluation.py --va
 Run the controlled evaluation against a local or deployed API:
 
 ```powershell
-python BioScouter_Paper\v3-concise\reproducibility\controlled_evaluation.py --base-url http://127.0.0.1:8001 --candidate-depth 100 --top-k 10
+python BioScouter_Paper\v3-concise\reproducibility\controlled_evaluation.py --base-url http://127.0.0.1:8001 --queries BioScouter_Paper\v3-concise\reproducibility\benchmark-queries-80.csv --expected-query-count 80 --candidate-depth 100 --top-k 10 --semantic-depth 50
 ```
 
-This writes raw responses, ranked outputs, run manifests, pool mappings, and
-two blinded annotation sheets. Do not report final retrieval metrics until the
-two independent annotator files are complete and adjudicated.
+This writes raw responses, ranked outputs, run manifests, pool mappings, summary
+CSVs, and two blinded annotation sheets. The 80-query run supports system
+coverage, candidate-set, and failure-rate reporting. It does not create
+independent P@10 or nDCG values unless its pooled records are separately labeled.
+The manuscript's independent relevance metrics remain tied to the completed and
+adjudicated 30-query labeling set.
+
+Runs created before per-mode timing scopes were added record BioScouter source
+search request time only and exclude local semantic reranking. Their elapsed
+fields are retained for audit but must not be reported as end-to-end hybrid
+latency. The manuscript uses the separate frozen ten-query SSE benchmark for
+time-to-first-result and total-search latency claims.
 
 ## Expanded Benchmark Example
 
@@ -89,7 +111,7 @@ The deterministic concept-normalization feature is evaluated as a paired
 candidate-set ablation, not as a standalone relevance metric:
 
 ```powershell
-python BioScouter_Paper\v3-concise\reproducibility\run_concept_ablation.py --base-url http://127.0.0.1:8001 --max-results 100
+python BioScouter_Paper\v3-concise\reproducibility\run_concept_ablation.py --base-url http://127.0.0.1:8001 --queries BioScouter_Paper\v3-concise\reproducibility\benchmark-queries-80.csv --max-results 10
 ```
 
 The output records result counts and candidate overlap for each query. Any

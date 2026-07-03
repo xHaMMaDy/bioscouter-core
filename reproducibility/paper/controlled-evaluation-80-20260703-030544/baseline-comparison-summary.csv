@@ -1,0 +1,4 @@
+system,queries,successful_queries,failed_queries,queries_with_results,zero_result_queries,top_k,returned_topk_records,unique_records,observed_sources,median_elapsed_s,mean_elapsed_s,timing_scope
+bioscouter_hybrid,80,80,0,80,0,10,800,704,11,9.317,11.921,legacy_source_request_elapsed_only
+native_source_api,80,80,0,62,18,10,455,391,10,1.237,2.266,legacy_source_request_elapsed_only
+omicsdi,80,80,0,77,3,10,699,695,16,1.02,2.754,legacy_source_request_elapsed_only

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import importlib.util
 import sys
 from pathlib import Path
@@ -25,6 +26,16 @@ def test_controlled_query_panel_is_disjoint_and_complete():
     validation = controlled.validate_inputs()
     assert validation["valid"] is True
     assert validation["controlled_queries"] == 30
+    assert len(validation["omics_types"]) == 8
+
+
+def test_eighty_query_panel_is_disjoint_and_complete():
+    validation = controlled.validate_inputs(
+        ROOT / "benchmark-queries-80.csv",
+        expected_query_count=80,
+    )
+    assert validation["valid"] is True
+    assert validation["controlled_queries"] == 80
     assert len(validation["omics_types"]) == 8
 
 
@@ -58,3 +69,51 @@ def test_linear_weighted_kappa_rewards_adjacent_agreement():
     reversed_labels = scoring.linear_weighted_kappa([0, 1, 2], [2, 1, 0])
     assert exact == 1.0
     assert exact > adjacent > reversed_labels
+
+
+def test_system_summaries_separate_ablation_and_baseline_rows(tmp_path):
+    run_rows = []
+    for system in controlled.SYSTEMS:
+        run_rows.append(
+            {
+                "query_id": "Q1",
+                "system": system,
+                "status": 200,
+                "elapsed_s": 1.25,
+                "records": [
+                    {
+                        "record_key": f"{system}:A1",
+                        "accession": "A1",
+                        "source": "example",
+                        "title": "Example dataset",
+                        "omics_type": "transcriptomics",
+                        "organism": "Homo sapiens",
+                        "sample_count": 10,
+                        "relevance_score": 0.9,
+                        "source_url": "https://example.org/A1",
+                    }
+                ],
+            }
+        )
+
+    controlled.write_system_summaries(run_rows, tmp_path, top_k=10)
+
+    with (tmp_path / "system-summary.csv").open(newline="", encoding="utf-8") as handle:
+        system_rows = list(csv.DictReader(handle))
+    with (tmp_path / "ablation-summary.csv").open(newline="", encoding="utf-8") as handle:
+        ablation_rows = list(csv.DictReader(handle))
+    with (tmp_path / "baseline-comparison-summary.csv").open(newline="", encoding="utf-8") as handle:
+        baseline_rows = list(csv.DictReader(handle))
+
+    assert {row["system"] for row in system_rows} == set(controlled.SYSTEMS)
+    assert {row["system"] for row in ablation_rows} == {
+        "bioscouter_keyword",
+        "bioscouter_embedding",
+        "bioscouter_hybrid",
+    }
+    assert {row["system"] for row in baseline_rows} == {
+        "bioscouter_hybrid",
+        "native_source_api",
+        "omicsdi",
+    }
+    assert all(row["returned_topk_records"] == "1" for row in system_rows)

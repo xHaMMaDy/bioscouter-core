@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-07-03T00:05:44.948158+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "query_file": "D:\\AI Agents\\VS Code\\BioScouter\\BioScouter_Paper\\v3-concise\\reproducibility\\benchmark-queries-80.csv",
+  "query_count": 80,
+  "query_sha256": "bf6a39f0776b5ac0ae01e05232d463dcc3faca74311af32fdd8174839ddbb962",
+  "corpus_query_file": "D:\\AI Agents\\VS Code\\BioScouter\\BioScouter_Paper\\v3-concise\\reproducibility\\corpus-construction-queries.csv",
+  "corpus_query_sha256": "bd934065eb8a114f0ef3b448d738f5bc4425fcdfe88e84838f2b0b918a02c9c9",
+  "corpus_file": "D:\\AI Agents\\VS Code\\BioScouter\\BioScouter_Paper\\v3-concise\\reproducibility\\controlled-evaluation-80-20260703-030544\\controlled-corpus.json",
+  "corpus_sha256": "5505662da0ca0ebe96e1462e54194bcdf2f71b8c7436519c2a47da99a03825f0",
+  "top_k": 10,
+  "candidate_depth": 100,
+  "semantic_depth": 50,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "systems": [
+    "bioscouter_keyword",
+    "bioscouter_embedding",
+    "bioscouter_hybrid",
+    "native_source_api",
+    "omicsdi"
+  ],
+  "production_vector_index_used": false,
+  "auto_index_results": false,
+  "concept_expansion": false,
+  "timing_scope": [
+    "legacy_source_request_elapsed_only; excludes local semantic reranking"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "controlled_run": "D:\\AI Agents\\VS Code\\BioScouter\\BioScouter_Paper\\v3-concise\\reproducibility\\controlled-evaluation-80-20260703-030544",
+  "systems": [
+    {
+      "system": "bioscouter_keyword",
+      "queries": 80,
+      "successful_queries": 80,
+      "failed_queries": 0,
+      "queries_with_results": 70,
+      "zero_result_queries": 10,
+      "returned_topk_records": 667,
+      "unique_records": 583,
+      "observed_sources": 9,
+      "median_elapsed_s": 9.317,
+      "mean_elapsed_s": 11.921,
+      "timing_scope": "legacy_source_request_elapsed_only"
+    },
+    {
+      "system": "bioscouter_embedding",
+      "queries": 80,
+      "successful_queries": 80,
+      "failed_queries": 0,
+      "queries_with_results": 70,
+      "zero_result_queries": 10,
+      "returned_topk_records": 667,
+      "unique_records": 616,
+      "observed_sources": 10,
+      "median_elapsed_s": 9.317,
+      "mean_elapsed_s": 11.921,
+      "timing_scope": "legacy_source_request_elapsed_only"
+    },
+    {
+      "system": "bioscouter_hybrid",
+      "queries": 80,
+      "successful_queries": 80,
+      "failed_queries": 0,
+      "queries_with_results": 80,
+      "zero_result_queries": 0,
+      "returned_topk_records": 800,
+      "unique_records": 704,
+      "observed_sources": 11,
+      "median_elapsed_s": 9.317,
+      "mean_elapsed_s": 11.921,
+      "timing_scope": "legacy_source_request_elapsed_only"
+    },
+    {
+      "system": "native_source_api",
+      "queries": 80,
+      "successful_queries": 80,
+      "failed_queries": 0,
+      "queries_with_results": 62,
+      "zero_result_queries": 18,
+      "returned_topk_records": 455,
+      "unique_records": 391,
+      "observed_sources": 10,
+      "median_elapsed_s": 1.237,
+      "mean_elapsed_s": 2.266,
+      "timing_scope": "legacy_source_request_elapsed_only"
+    },
+    {
+      "system": "omicsdi",
+      "queries": 80,
+      "successful_queries": 80,
+      "failed_queries": 0,
+      "queries_with_results": 77,
+      "zero_result_queries": 3,
+      "returned_topk_records": 699,
+      "unique_records": 695,
+      "observed_sources": 16,
+      "median_elapsed_s": 1.02,
+      "mean_elapsed_s": 2.754,
+      "timing_scope": "legacy_source_request_elapsed_only"
+    }
+  ],
+  "decision_gate": {
+    "at_least_60_hybrid_queries_with_results": true,
+    "required_internal_modes_present": true,
+    "required_baselines_present": true,
+    "traceable_outputs_present": true
+  },
+  "decision_gate_passed": true,
+  "concept_ablation": {
+    "queries": "80",
+    "plain_successful_queries": "43",
+    "expanded_successful_queries": "42",
+    "plain_total_results": "343",
+    "expanded_total_results": "333",
+    "mean_result_delta": "-0.125",
+    "median_result_delta": "0.0",
+    "queries_with_more_results": "0",
+    "queries_with_fewer_results": "1",
+    "queries_with_same_count": "79",
+    "median_jaccard_overlap": "1.0",
+    "median_plain_elapsed_s": "1.204",
+    "median_expanded_elapsed_s": "0.659"
+  },
+  "relevance_boundary": "The 80-query controlled outputs are not independently labeled. P@10, strict P@10, nDCG@10, MRR, and relevant-dataset superiority must not be inferred from returned counts or latency.",
+  "independent_relevance_evidence": "Use the separately completed and adjudicated 30-query, 300-record evaluation."
+}

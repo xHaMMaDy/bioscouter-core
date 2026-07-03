@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
+import statistics
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +26,14 @@ CONTROLLED_QUERIES = ROOT / "controlled-benchmark-queries.csv"
 def read_queries(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def request_json(
@@ -108,8 +118,11 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     endpoint = args.base_url.rstrip("/") + "/api/omics/search"
 
+    query_path = Path(args.queries).resolve()
+    query_rows = read_queries(query_path)
     records: list[dict[str, Any]] = []
-    for row in read_queries(Path(args.queries)):
+    raw_responses: list[dict[str, Any]] = []
+    for row in query_rows:
         status_plain, elapsed_plain, plain = run_variant(
             endpoint,
             row,
@@ -151,29 +164,101 @@ def main() -> int:
                 "expanded_elapsed_s": round(elapsed_expanded, 3),
             }
         )
+        raw_responses.append(
+            {
+                "query_id": row["query_id"],
+                "query": row["query"],
+                "plain": plain,
+                "expanded": expanded,
+            }
+        )
         print(
             f"{row['query_id']} plain={len(plain_datasets)} "
-            f"expanded={len(expanded_datasets)} shared={len(shared)}"
+            f"expanded={len(expanded_datasets)} shared={len(shared)}",
+            flush=True,
         )
         if args.delay_s:
             time.sleep(args.delay_s)
 
+    output_files: list[Path] = []
     if records:
         csv_path = out_dir / "concept-ablation-summary.csv"
         with csv_path.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(records[0].keys()))
             writer.writeheader()
             writer.writerows(records)
+        output_files.append(csv_path)
 
-    (out_dir / "concept-ablation-run.json").write_text(
+        deltas = [row["expanded_results"] - row["plain_results"] for row in records]
+        aggregate = {
+            "queries": len(records),
+            "plain_successful_queries": sum(row["plain_status"] == 200 for row in records),
+            "expanded_successful_queries": sum(row["expanded_status"] == 200 for row in records),
+            "plain_total_results": sum(row["plain_results"] for row in records),
+            "expanded_total_results": sum(row["expanded_results"] for row in records),
+            "mean_result_delta": round(sum(deltas) / len(deltas), 3),
+            "median_result_delta": statistics.median(deltas),
+            "queries_with_more_results": sum(delta > 0 for delta in deltas),
+            "queries_with_fewer_results": sum(delta < 0 for delta in deltas),
+            "queries_with_same_count": sum(delta == 0 for delta in deltas),
+            "median_jaccard_overlap": round(
+                statistics.median(row["jaccard_overlap"] for row in records), 4
+            ),
+            "median_plain_elapsed_s": round(
+                statistics.median(row["plain_elapsed_s"] for row in records), 3
+            ),
+            "median_expanded_elapsed_s": round(
+                statistics.median(row["expanded_elapsed_s"] for row in records), 3
+            ),
+        }
+        aggregate_path = out_dir / "concept-ablation-aggregate.csv"
+        with aggregate_path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(aggregate.keys()))
+            writer.writeheader()
+            writer.writerow(aggregate)
+        output_files.append(aggregate_path)
+
+    raw_path = out_dir / "concept-ablation-raw.json"
+    raw_path.write_text(json.dumps(raw_responses, indent=2), encoding="utf-8")
+    output_files.append(raw_path)
+
+    run_path = out_dir / "concept-ablation-run.json"
+    run_path.write_text(
         json.dumps(
             {
                 "created_at": created.isoformat(),
                 "interpretation": "Descriptive candidate-set ablation; not an independent relevance metric.",
                 "endpoint": endpoint,
                 "max_results": args.max_results,
-                "queries": str(Path(args.queries)),
+                "queries": str(query_path),
+                "query_count": len(query_rows),
+                "query_sha256": sha256_file(query_path),
+                "concept_expansion_variants": [False, True],
                 "records": records,
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    output_files.append(run_path)
+
+    manifest_path = out_dir / "run_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            {
+                "created_at": created.isoformat(),
+                "query_file": {
+                    "path": str(query_path),
+                    "sha256": sha256_file(query_path),
+                    "bytes": query_path.stat().st_size,
+                },
+                "files": {
+                    path.name: {
+                        "sha256": sha256_file(path),
+                        "bytes": path.stat().st_size,
+                    }
+                    for path in output_files
+                },
             },
             indent=2,
         ),

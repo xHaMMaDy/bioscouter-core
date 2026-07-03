@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-07-03T00:43:07.501530+00:00",
+  "query_file": {
+    "path": "D:\\AI Agents\\VS Code\\BioScouter\\BioScouter_Paper\\v3-concise\\reproducibility\\benchmark-queries-80.csv",
+    "sha256": "bf6a39f0776b5ac0ae01e05232d463dcc3faca74311af32fdd8174839ddbb962",
+    "bytes": 19531
+  },
+  "files": {
+    "concept-ablation-summary.csv": {
+      "sha256": "431d62cc6e637dc964ad728c19b01591fb3e9505df08a75e48fb26ff2dae50f5",
+      "bytes": 6978
+    },
+    "concept-ablation-aggregate.csv": {
+      "sha256": "2d62eecd33f806a2512a89b4111e4ae6414aa206a83b4b7467f7f80af4bc911f",
+      "bytes": 344
+    },
+    "concept-ablation-raw.json": {
+      "sha256": "762a0a98b55c7e1cddb5e95752e138792a3185c9643d95656d638f1572cc9566",
+      "bytes": 3554434
+    },
+    "concept-ablation-run.json": {
+      "sha256": "12fd06a7da00cc0d34857d084d5b15c422537a2852987f9628f8598c77152625",
+      "bytes": 30735
+    }
+  }
+}
