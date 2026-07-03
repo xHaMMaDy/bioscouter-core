@@ -1,0 +1,51 @@
+{
+  "total_rows": 2348,
+  "unanimous_rows": 744,
+  "unanimous_fraction": 0.316865,
+  "majority_consensus_rows": 2200,
+  "majority_consensus_fraction": 0.936968,
+  "no_majority_rows_requiring_adjudication": 148,
+  "no_majority_fraction": 0.063032,
+  "fleiss_kappa_nominal": 0.243519,
+  "label_counts": {
+    "A": {
+      "1": 925,
+      "2": 1128,
+      "0": 295
+    },
+    "B": {
+      "0": 803,
+      "2": 458,
+      "1": 1087
+    },
+    "C": {
+      "1": 1440,
+      "2": 231,
+      "0": 677
+    }
+  },
+  "pairwise": {
+    "A_vs_B": {
+      "exact_agreement": 0.452726,
+      "within_one_category_agreement": 0.897359,
+      "cohens_kappa_unweighted": 0.196302,
+      "cohens_kappa_linear_weighted": 0.252755
+    },
+    "A_vs_C": {
+      "exact_agreement": 0.430153,
+      "within_one_category_agreement": 0.939949,
+      "cohens_kappa_unweighted": 0.155664,
+      "cohens_kappa_linear_weighted": 0.237211
+    },
+    "B_vs_C": {
+      "exact_agreement": 0.687819,
+      "within_one_category_agreement": 0.999148,
+      "cohens_kappa_unweighted": 0.478206,
+      "cohens_kappa_linear_weighted": 0.545124
+    }
+  },
+  "outputs": {
+    "provisional_consensus_all_rows": "BioScouter_Paper\\v3-concise\\evaluator_packet\\BioScouter_80Q_Three_Annotator_Evaluation_20260703\\COORDINATOR_ONLY\\three_annotator_consensus_provisional_all_rows.csv",
+    "adjudication_required_rows": "BioScouter_Paper\\v3-concise\\evaluator_packet\\BioScouter_80Q_Three_Annotator_Evaluation_20260703\\COORDINATOR_ONLY\\ADJUDICATION_80Q_TO_COMPLETE.csv"
+  }
+}

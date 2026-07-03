@@ -20,6 +20,7 @@ def load_module(name: str, filename: str):
 
 controlled = load_module("controlled_evaluation", "controlled_evaluation.py")
 scoring = load_module("score_relevance_labels", "score_relevance_labels.py")
+three_scoring = load_module("score_three_annotator_labels", "score_three_annotator_labels.py")
 
 
 def test_controlled_query_panel_is_disjoint_and_complete():
@@ -69,6 +70,55 @@ def test_linear_weighted_kappa_rewards_adjacent_agreement():
     reversed_labels = scoring.linear_weighted_kappa([0, 1, 2], [2, 1, 0])
     assert exact == 1.0
     assert exact > adjacent > reversed_labels
+
+
+def test_three_annotator_consensus_uses_majority_and_adjudication():
+    label_sets = {
+        "A": {("Q1", "P1"): 2, ("Q1", "P2"): 0},
+        "B": {("Q1", "P1"): 2, ("Q1", "P2"): 1},
+        "C": {("Q1", "P1"): 1, ("Q1", "P2"): 2},
+    }
+    base_rows = {
+        ("Q1", "P1"): {
+            "query_id": "Q1",
+            "pool_id": "P1",
+            "accession": "A1",
+            "source": "example",
+            "reported_omics_type": "transcriptomics",
+            "title": "Example one",
+            "source_url": "https://example.org/1",
+        },
+        ("Q1", "P2"): {
+            "query_id": "Q1",
+            "pool_id": "P2",
+            "accession": "A2",
+            "source": "example",
+            "reported_omics_type": "transcriptomics",
+            "title": "Example two",
+            "source_url": "https://example.org/2",
+        },
+    }
+    row_sets = {"A": base_rows, "B": base_rows, "C": base_rows}
+    adjudication = {
+        ("Q1", "P2"): {
+            "query_id": "Q1",
+            "pool_id": "P2",
+            "adjudicated_label": "1",
+            "adjudication_notes": "partial match",
+        }
+    }
+
+    labels, rows, summary = three_scoring.build_final_consensus(
+        label_sets,
+        row_sets,
+        adjudication,
+    )
+
+    assert labels[("Q1", "P1")] == 2
+    assert labels[("Q1", "P2")] == 1
+    assert summary["majority_rows"] == 1
+    assert summary["adjudicated_no_majority_rows"] == 1
+    assert rows[1]["final_label_source"] == "adjudicated_no_majority"
 
 
 def test_system_summaries_separate_ablation_and_baseline_rows(tmp_path):

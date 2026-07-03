@@ -69,7 +69,8 @@ See:
 - `reproducibility/paper/README.md`
 - `reproducibility/paper/expanded-benchmark-queries.csv`
 - `reproducibility/paper/expanded-benchmark-20260702-153134/expanded-benchmark-freeze.json`
-- `reproducibility/independent_relevance_evaluation/INDEPENDENT_EVALUATION_RESULTS_SUMMARY.md`
+- `reproducibility/paper/independent_relevance_evaluation_80q_20260703/README.md`
+- `reproducibility/paper/score_three_annotator_labels.py`
 - `docs/REPRODUCIBILITY.md`
 
 ## Code Availability Statement
@@ -81,4 +82,3 @@ Suggested manuscript wording is in `docs/CODE_AVAILABILITY.md`.
 ```bash
 python -m pytest
 ```
-

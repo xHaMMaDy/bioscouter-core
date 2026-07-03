@@ -9,7 +9,7 @@ https://doi.org/10.5281/zenodo.21143417.
 
 - `benchmark-queries.csv` - legacy ten-query snapshot retained for audit history; not the primary controlled validation panel.
 - `benchmark-freeze.json` - legacy frozen snapshot retained so older manuscript numbers can be traced and removed or replaced.
-- `controlled-benchmark-queries.csv` - 30-query held-out panel used for the completed independent relevance assessment.
+- `controlled-benchmark-queries.csv` - earlier 30-query held-out panel retained for audit history.
 - `benchmark-queries-80.csv` - broader 80-query controlled baseline and ranking-ablation panel across eight omics categories.
 - `corpus-construction-queries.csv` - independent corpus-building queries used before held-out evaluation.
 - `controlled_evaluation.py` - leakage-resistant controlled evaluation runner and annotation-pool generator.
@@ -24,10 +24,11 @@ https://doi.org/10.5281/zenodo.21143417.
 - `run_expanded_benchmark.py` - helper script that records a dated live snapshot for the expanded panel and creates top-10 labeling sheets.
 - `expanded-benchmark-*/expanded-benchmark-freeze.json` - dated live expanded benchmark output.
 - `expanded-benchmark-*/annotator_A_top10.csv` and `annotator_B_top10.csv` - independent relevance-labeling sheets.
-- `score_relevance_labels.py` - computes P@10, nDCG@10, percent agreement, Cohen's kappa, and an adjudication sheet after annotator labels are filled.
+- `score_relevance_labels.py` - legacy two-annotator scorer retained for audit history.
+- `score_three_annotator_labels.py` - computes three-annotator validation metrics for the 80-query pooled record set, including final consensus labels, P@10, strict P@10, nDCG@10, MRR, agreement, Fleiss' kappa, bootstrap confidence intervals, paired tests, and adjudicated no-majority rows.
 - `prepare_label_reuse.py` - creates the 80-query pooled labeling file and reuses a prior consensus label only when normalized query, source, and accession all match exactly.
 - `analyze_benchmark_upgrade.py` - applies the predeclared completion gates and writes a benchmark analysis without inferring relevance from counts.
-- `independent-labeling-protocol.md` - protocol for the two-annotator relevance check.
+- `independent-labeling-protocol.md` - legacy protocol for the two-annotator relevance check; the current submission uses the 80-query three-annotator evaluator packet under `independent_relevance_evaluation_80q_20260703/`.
 - `run_source_reliability.py` - cold/warm live-source reliability runner.
 - `run_concept_ablation.py` - paired runner comparing candidate sets with and without deterministic concept expansion.
 - `concept-ablation-*/concept-ablation-summary.csv` - per-query off/on counts, overlap, and elapsed time.
@@ -78,11 +79,10 @@ python BioScouter_Paper\v3-concise\reproducibility\controlled_evaluation.py --ba
 ```
 
 This writes raw responses, ranked outputs, run manifests, pool mappings, summary
-CSVs, and two blinded annotation sheets. The 80-query run supports system
-coverage, candidate-set, and failure-rate reporting. It does not create
-independent P@10 or nDCG values unless its pooled records are separately labeled.
-The manuscript's independent relevance metrics remain tied to the completed and
-adjudicated 30-query labeling set.
+CSVs, and blinded annotation sheets. The current manuscript uses the completed
+80-query three-annotator packet in
+`independent_relevance_evaluation_80q_20260703/` to report independent
+P@10, strict P@10, nDCG@10, MRR, agreement, and adjudicated consensus metrics.
 
 Runs created before per-mode timing scopes were added record BioScouter source
 search request time only and exclude local semantic reranking. Their elapsed
@@ -96,14 +96,21 @@ time-to-first-result and total-search latency claims.
 python BioScouter_Paper\v3-concise\reproducibility\run_expanded_benchmark.py --base-url http://127.0.0.1:8001 --max-results 100 --top-n 10
 ```
 
-After two annotators complete the generated top-10 CSV files, run:
+For the legacy two-annotator expanded panel, after both annotators complete the
+generated top-10 CSV files, run:
 
 ```powershell
 python BioScouter_Paper\v3-concise\reproducibility\score_relevance_labels.py --annotator-a expanded-benchmark-YYYYMMDD-HHMMSS\annotator_A_top10.csv --annotator-b expanded-benchmark-YYYYMMDD-HHMMSS\annotator_B_top10.csv
 ```
 
-Do not report independent-validation metrics until both annotator files are
-completed and disagreements are adjudicated.
+For the current 80-query three-annotator packet, run:
+
+```powershell
+python BioScouter_Paper\v3-concise\reproducibility\score_three_annotator_labels.py
+```
+
+Do not update manuscript independent-validation metrics unless annotator sheets,
+adjudication rows, and scoring outputs are all complete.
 
 ## Concept Expansion Ablation
 

@@ -1,0 +1,51 @@
+{
+  "annotators": {
+    "A": {
+      "file": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_A_Labeling_Sheet_COMPLETED.csv",
+      "labels": 2348,
+      "missing": [],
+      "label_counts": {
+        "2": 1128,
+        "1": 925,
+        "0": 295
+      }
+    },
+    "B": {
+      "file": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_B_Labeling_Sheet_COMPLETED.csv",
+      "labels": 2348,
+      "missing": [],
+      "label_counts": {
+        "0": 803,
+        "2": 458,
+        "1": 1087
+      }
+    },
+    "C": {
+      "file": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_C_Labeling_Sheet_COMPLETED.csv",
+      "labels": 2348,
+      "missing": [],
+      "label_counts": {
+        "0": 677,
+        "1": 1440,
+        "2": 231
+      }
+    }
+  },
+  "complete": true,
+  "errors": [],
+  "adjudication": {
+    "file": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703\\COORDINATOR_ONLY\\ADJUDICATION_80Q_COMPLETED_Amr.csv",
+    "rows": 148
+  },
+  "final_consensus": {
+    "total_rows": 2348,
+    "unanimous_rows": 744,
+    "majority_rows": 2200,
+    "adjudicated_no_majority_rows": 148,
+    "final_label_counts": {
+      "1": 1236,
+      "2": 504,
+      "0": 608
+    }
+  }
+}

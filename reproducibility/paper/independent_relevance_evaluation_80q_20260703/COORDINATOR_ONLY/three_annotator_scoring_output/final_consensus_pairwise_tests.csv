@@ -1,0 +1,17 @@
+system,baseline,metric,paired_queries,mean_difference,sign_permutation_p
+bioscouter_keyword,omicsdi,p_at_10,80,-0.01,0.889306
+bioscouter_keyword,omicsdi,strict_p_at_10,80,0.045,0.320084
+bioscouter_keyword,omicsdi,ndcg_at_10,80,0.020524,0.737713
+bioscouter_keyword,omicsdi,mrr_at_10,80,0.040714,0.551122
+bioscouter_embedding,omicsdi,p_at_10,80,-0.0,1.0
+bioscouter_embedding,omicsdi,strict_p_at_10,80,0.03625,0.415329
+bioscouter_embedding,omicsdi,ndcg_at_10,80,0.015547,0.79796
+bioscouter_embedding,omicsdi,mrr_at_10,80,0.02689,0.706965
+bioscouter_hybrid,omicsdi,p_at_10,80,0.0925,0.088296
+bioscouter_hybrid,omicsdi,strict_p_at_10,80,0.03625,0.40028
+bioscouter_hybrid,omicsdi,ndcg_at_10,80,0.090932,0.101295
+bioscouter_hybrid,omicsdi,mrr_at_10,80,0.052118,0.453577
+native_source_api,omicsdi,p_at_10,80,-0.235,0.00045
+native_source_api,omicsdi,strict_p_at_10,80,-0.0825,0.028649
+native_source_api,omicsdi,ndcg_at_10,80,-0.187347,0.0017
+native_source_api,omicsdi,mrr_at_10,80,-0.078244,0.250837

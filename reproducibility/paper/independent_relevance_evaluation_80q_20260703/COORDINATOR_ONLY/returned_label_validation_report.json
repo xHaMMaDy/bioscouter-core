@@ -1,0 +1,113 @@
+{
+  "valid": true,
+  "errors": [],
+  "mapping_rows": 3288,
+  "mapping_unique_query_pool_ids": 2348,
+  "annotators": {
+    "A": {
+      "file": "BioScouter_Paper\\v3-concise\\evaluator_packet\\BioScouter_80Q_Three_Annotator_Evaluation_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_A_Labeling_Sheet_COMPLETED.csv",
+      "sha256": "ecb6e858460b73c545e5918aa23a883714891f12578bd3d76a83ca3b0b12b9df",
+      "rows": 2348,
+      "columns": [
+        "query_id",
+        "query",
+        "expected_omics_type",
+        "expected_constraints",
+        "pool_id",
+        "accession",
+        "source",
+        "reported_omics_type",
+        "title",
+        "description",
+        "organism",
+        "sample_count",
+        "disease",
+        "tissue",
+        "source_url",
+        "annotator_label",
+        "annotator_notes"
+      ],
+      "unique_query_pool_ids": 2348,
+      "label_counts": {
+        "0": 295,
+        "1": 925,
+        "2": 1128
+      },
+      "invalid_labels": [],
+      "blank_labels": 0,
+      "notes_nonblank": 1220,
+      "missing_from_mapping_sample": [],
+      "mapping_ids_missing_from_file_sample": []
+    },
+    "B": {
+      "file": "BioScouter_Paper\\v3-concise\\evaluator_packet\\BioScouter_80Q_Three_Annotator_Evaluation_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_B_Labeling_Sheet_COMPLETED.csv",
+      "sha256": "50857631f4fbd39d731a4999ecfc1d73e2ab4fcc6b064546cc99a23f4002a9a9",
+      "rows": 2348,
+      "columns": [
+        "query_id",
+        "query",
+        "expected_omics_type",
+        "expected_constraints",
+        "pool_id",
+        "accession",
+        "source",
+        "reported_omics_type",
+        "title",
+        "description",
+        "organism",
+        "sample_count",
+        "disease",
+        "tissue",
+        "source_url",
+        "annotator_label",
+        "annotator_notes"
+      ],
+      "unique_query_pool_ids": 2348,
+      "label_counts": {
+        "0": 803,
+        "1": 1087,
+        "2": 458
+      },
+      "invalid_labels": [],
+      "blank_labels": 0,
+      "notes_nonblank": 2348,
+      "missing_from_mapping_sample": [],
+      "mapping_ids_missing_from_file_sample": []
+    },
+    "C": {
+      "file": "BioScouter_Paper\\v3-concise\\evaluator_packet\\BioScouter_80Q_Three_Annotator_Evaluation_20260703\\RETURNED_LABELS\\BioScouter_80Q_Annotator_C_Labeling_Sheet_COMPLETED.csv",
+      "sha256": "7e7cbc15f9edf613466be66bf6478da0aa4ddc8500f734a6f31bd4bd7fa831d1",
+      "rows": 2348,
+      "columns": [
+        "query_id",
+        "query",
+        "expected_omics_type",
+        "expected_constraints",
+        "pool_id",
+        "accession",
+        "source",
+        "reported_omics_type",
+        "title",
+        "description",
+        "organism",
+        "sample_count",
+        "disease",
+        "tissue",
+        "source_url",
+        "annotator_label",
+        "annotator_notes"
+      ],
+      "unique_query_pool_ids": 2348,
+      "label_counts": {
+        "0": 677,
+        "1": 1440,
+        "2": 231
+      },
+      "invalid_labels": [],
+      "blank_labels": 0,
+      "notes_nonblank": 2031,
+      "missing_from_mapping_sample": [],
+      "mapping_ids_missing_from_file_sample": []
+    }
+  }
+}

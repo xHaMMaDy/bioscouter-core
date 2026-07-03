@@ -1,0 +1,283 @@
+{
+  "status": "three_annotator_80q_validation_complete",
+  "packet_dir": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703",
+  "mapping": "D:\\AI Agents\\VS Code\\BioScouter\\bioscouter-core\\reproducibility\\paper\\independent_relevance_evaluation_80q_20260703\\COORDINATOR_ONLY\\pool_mapping_DO_NOT_SEND_TO_ANNOTATORS.csv",
+  "agreement": {
+    "total_rows": 2348,
+    "unanimous_rows": 744,
+    "unanimous_fraction": 0.316865,
+    "majority_rows": 2200,
+    "majority_fraction": 0.936968,
+    "adjudicated_no_majority_rows": 148,
+    "adjudicated_no_majority_fraction": 0.063032,
+    "fleiss_kappa_nominal": 0.243519,
+    "pairwise": {
+      "A_vs_B": {
+        "n_paired": 2348,
+        "exact_percent_agreement": 0.452726,
+        "within_one_category_agreement": 0.897359,
+        "cohens_kappa_unweighted": 0.196302,
+        "cohens_kappa_linear_weighted": 0.252755
+      },
+      "A_vs_C": {
+        "n_paired": 2348,
+        "exact_percent_agreement": 0.430153,
+        "within_one_category_agreement": 0.939949,
+        "cohens_kappa_unweighted": 0.155664,
+        "cohens_kappa_linear_weighted": 0.237211
+      },
+      "B_vs_C": {
+        "n_paired": 2348,
+        "exact_percent_agreement": 0.687819,
+        "within_one_category_agreement": 0.999148,
+        "cohens_kappa_unweighted": 0.478206,
+        "cohens_kappa_linear_weighted": 0.545124
+      }
+    }
+  },
+  "final_consensus": {
+    "total_rows": 2348,
+    "unanimous_rows": 744,
+    "majority_rows": 2200,
+    "adjudicated_no_majority_rows": 148,
+    "final_label_counts": {
+      "1": 1236,
+      "2": 504,
+      "0": 608
+    }
+  },
+  "final_consensus_metrics": {
+    "system_summary": [
+      {
+        "system": "bioscouter_keyword",
+        "queries": 80,
+        "zero_result_queries": 10,
+        "mean_p_at_10": 0.655,
+        "p_at_10_ci95_low": 0.56625,
+        "p_at_10_ci95_high": 0.74,
+        "mean_strict_p_at_10": 0.245,
+        "strict_p_at_10_ci95_low": 0.18,
+        "strict_p_at_10_ci95_high": 0.3175,
+        "mean_ndcg_at_10": 0.551413,
+        "ndcg_at_10_ci95_low": 0.47845,
+        "ndcg_at_10_ci95_high": 0.623909,
+        "mean_mrr_at_10": 0.41,
+        "mrr_at_10_ci95_low": 0.311875,
+        "mrr_at_10_ci95_high": 0.510417,
+        "mean_pooled_relevant_coverage_at_10": 0.277978,
+        "pooled_relevant_coverage_at_10_ci95_low": 0.243416,
+        "pooled_relevant_coverage_at_10_ci95_high": 0.312399
+      },
+      {
+        "system": "bioscouter_embedding",
+        "queries": 80,
+        "zero_result_queries": 10,
+        "mean_p_at_10": 0.665,
+        "p_at_10_ci95_low": 0.57375,
+        "p_at_10_ci95_high": 0.75375,
+        "mean_strict_p_at_10": 0.23625,
+        "strict_p_at_10_ci95_low": 0.1725,
+        "strict_p_at_10_ci95_high": 0.30375,
+        "mean_ndcg_at_10": 0.546436,
+        "ndcg_at_10_ci95_low": 0.46816,
+        "ndcg_at_10_ci95_high": 0.621602,
+        "mean_mrr_at_10": 0.396176,
+        "mrr_at_10_ci95_low": 0.298452,
+        "mrr_at_10_ci95_high": 0.497321,
+        "mean_pooled_relevant_coverage_at_10": 0.276078,
+        "pooled_relevant_coverage_at_10_ci95_low": 0.241625,
+        "pooled_relevant_coverage_at_10_ci95_high": 0.310672
+      },
+      {
+        "system": "bioscouter_hybrid",
+        "queries": 80,
+        "zero_result_queries": 0,
+        "mean_p_at_10": 0.7575,
+        "p_at_10_ci95_low": 0.6925,
+        "p_at_10_ci95_high": 0.82,
+        "mean_strict_p_at_10": 0.23625,
+        "strict_p_at_10_ci95_low": 0.175,
+        "strict_p_at_10_ci95_high": 0.30125,
+        "mean_ndcg_at_10": 0.621821,
+        "ndcg_at_10_ci95_low": 0.562393,
+        "ndcg_at_10_ci95_high": 0.679492,
+        "mean_mrr_at_10": 0.421404,
+        "mrr_at_10_ci95_low": 0.322217,
+        "mrr_at_10_ci95_high": 0.518889,
+        "mean_pooled_relevant_coverage_at_10": 0.360547,
+        "pooled_relevant_coverage_at_10_ci95_low": 0.329875,
+        "pooled_relevant_coverage_at_10_ci95_high": 0.390989
+      },
+      {
+        "system": "native_source_api",
+        "queries": 80,
+        "zero_result_queries": 18,
+        "mean_p_at_10": 0.43,
+        "p_at_10_ci95_low": 0.34375,
+        "p_at_10_ci95_high": 0.51875,
+        "mean_strict_p_at_10": 0.1175,
+        "strict_p_at_10_ci95_low": 0.07125,
+        "strict_p_at_10_ci95_high": 0.16625,
+        "mean_ndcg_at_10": 0.343543,
+        "ndcg_at_10_ci95_low": 0.273417,
+        "ndcg_at_10_ci95_high": 0.413467,
+        "mean_mrr_at_10": 0.291042,
+        "mrr_at_10_ci95_low": 0.2,
+        "mrr_at_10_ci95_high": 0.384375,
+        "mean_pooled_relevant_coverage_at_10": 0.181726,
+        "pooled_relevant_coverage_at_10_ci95_low": 0.145451,
+        "pooled_relevant_coverage_at_10_ci95_high": 0.218132
+      },
+      {
+        "system": "omicsdi",
+        "queries": 80,
+        "zero_result_queries": 3,
+        "mean_p_at_10": 0.665,
+        "p_at_10_ci95_low": 0.585,
+        "p_at_10_ci95_high": 0.7425,
+        "mean_strict_p_at_10": 0.2,
+        "strict_p_at_10_ci95_low": 0.14,
+        "strict_p_at_10_ci95_high": 0.2625,
+        "mean_ndcg_at_10": 0.530889,
+        "ndcg_at_10_ci95_low": 0.46036,
+        "ndcg_at_10_ci95_high": 0.59958,
+        "mean_mrr_at_10": 0.369286,
+        "mrr_at_10_ci95_low": 0.270327,
+        "mrr_at_10_ci95_high": 0.467827,
+        "mean_pooled_relevant_coverage_at_10": 0.332469,
+        "pooled_relevant_coverage_at_10_ci95_low": 0.284251,
+        "pooled_relevant_coverage_at_10_ci95_high": 0.383096
+      }
+    ],
+    "pairwise_tests": [
+      {
+        "system": "bioscouter_keyword",
+        "baseline": "omicsdi",
+        "metric": "p_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.01,
+        "sign_permutation_p": 0.889306
+      },
+      {
+        "system": "bioscouter_keyword",
+        "baseline": "omicsdi",
+        "metric": "strict_p_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.045,
+        "sign_permutation_p": 0.320084
+      },
+      {
+        "system": "bioscouter_keyword",
+        "baseline": "omicsdi",
+        "metric": "ndcg_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.020524,
+        "sign_permutation_p": 0.737713
+      },
+      {
+        "system": "bioscouter_keyword",
+        "baseline": "omicsdi",
+        "metric": "mrr_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.040714,
+        "sign_permutation_p": 0.551122
+      },
+      {
+        "system": "bioscouter_embedding",
+        "baseline": "omicsdi",
+        "metric": "p_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.0,
+        "sign_permutation_p": 1.0
+      },
+      {
+        "system": "bioscouter_embedding",
+        "baseline": "omicsdi",
+        "metric": "strict_p_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.03625,
+        "sign_permutation_p": 0.415329
+      },
+      {
+        "system": "bioscouter_embedding",
+        "baseline": "omicsdi",
+        "metric": "ndcg_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.015547,
+        "sign_permutation_p": 0.79796
+      },
+      {
+        "system": "bioscouter_embedding",
+        "baseline": "omicsdi",
+        "metric": "mrr_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.02689,
+        "sign_permutation_p": 0.706965
+      },
+      {
+        "system": "bioscouter_hybrid",
+        "baseline": "omicsdi",
+        "metric": "p_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.0925,
+        "sign_permutation_p": 0.088296
+      },
+      {
+        "system": "bioscouter_hybrid",
+        "baseline": "omicsdi",
+        "metric": "strict_p_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.03625,
+        "sign_permutation_p": 0.40028
+      },
+      {
+        "system": "bioscouter_hybrid",
+        "baseline": "omicsdi",
+        "metric": "ndcg_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.090932,
+        "sign_permutation_p": 0.101295
+      },
+      {
+        "system": "bioscouter_hybrid",
+        "baseline": "omicsdi",
+        "metric": "mrr_at_10",
+        "paired_queries": 80,
+        "mean_difference": 0.052118,
+        "sign_permutation_p": 0.453577
+      },
+      {
+        "system": "native_source_api",
+        "baseline": "omicsdi",
+        "metric": "p_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.235,
+        "sign_permutation_p": 0.00045
+      },
+      {
+        "system": "native_source_api",
+        "baseline": "omicsdi",
+        "metric": "strict_p_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.0825,
+        "sign_permutation_p": 0.028649
+      },
+      {
+        "system": "native_source_api",
+        "baseline": "omicsdi",
+        "metric": "ndcg_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.187347,
+        "sign_permutation_p": 0.0017
+      },
+      {
+        "system": "native_source_api",
+        "baseline": "omicsdi",
+        "metric": "mrr_at_10",
+        "paired_queries": 80,
+        "mean_difference": -0.078244,
+        "sign_permutation_p": 0.250837
+      }
+    ]
+  }
+}

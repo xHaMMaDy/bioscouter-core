@@ -1,0 +1,33 @@
+{
+  "total_rows": 2348,
+  "unanimous_rows": 744,
+  "unanimous_fraction": 0.316865,
+  "majority_rows": 2200,
+  "majority_fraction": 0.936968,
+  "adjudicated_no_majority_rows": 148,
+  "adjudicated_no_majority_fraction": 0.063032,
+  "fleiss_kappa_nominal": 0.243519,
+  "pairwise": {
+    "A_vs_B": {
+      "n_paired": 2348,
+      "exact_percent_agreement": 0.452726,
+      "within_one_category_agreement": 0.897359,
+      "cohens_kappa_unweighted": 0.196302,
+      "cohens_kappa_linear_weighted": 0.252755
+    },
+    "A_vs_C": {
+      "n_paired": 2348,
+      "exact_percent_agreement": 0.430153,
+      "within_one_category_agreement": 0.939949,
+      "cohens_kappa_unweighted": 0.155664,
+      "cohens_kappa_linear_weighted": 0.237211
+    },
+    "B_vs_C": {
+      "n_paired": 2348,
+      "exact_percent_agreement": 0.687819,
+      "within_one_category_agreement": 0.999148,
+      "cohens_kappa_unweighted": 0.478206,
+      "cohens_kappa_linear_weighted": 0.545124
+    }
+  }
+}
