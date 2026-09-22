@@ -18,4 +18,4 @@ This repository does not contain the hosted frontend, authentication, accounts, 
 
 ## Verification
 
-The repository test suite passes before tagging this release. The exact release commit and the reproducibility archive hash are recorded in the accompanying release manifest used for the immutable archive.
+The repository test suite passes before tagging this release. The exact release commit and the reproducibility archive hash are recorded in the accompanying release manifest used for the immutable archive. The published Zenodo record is `https://doi.org/10.5281/zenodo.22903935`.

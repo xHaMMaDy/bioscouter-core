@@ -3,7 +3,7 @@
 This folder freezes the benchmark evidence used by the v3 concise manuscript.
 The public scientific core and reproducibility snapshot are available at
 https://github.com/xHaMMaDy/bioscouter-core and archived on Zenodo at
-https://doi.org/10.5281/zenodo.21143417.
+https://doi.org/10.5281/zenodo.22903935.
 
 ## Files
 
