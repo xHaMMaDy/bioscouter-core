@@ -1,8 +1,8 @@
-# BioScouter Core 0.3.0
+# BioScouter Core 0.3.1
 
 Release date: 22 September 2026
 
-This release records the public scientific core and reproducibility materials used for the BioScouter manuscript revision. It updates the public author metadata to Ibrahim Abdelkarim Hammad, Amr M. Alhfnawy, and Sameh E. Hassanein, and preserves the controlled evaluation artifacts and scripts already included in the repository.
+This release records the public scientific core and reproducibility materials used for the BioScouter manuscript revision. It updates the public author metadata to Ibrahim Abdelkarim Hammad, Amr M. Alhfnawy, and Sameh E. Hassanein, and preserves the controlled evaluation artifacts and scripts already included in the repository. Version 0.3.0 already exists on GitHub; this patch release contains the corrected author metadata and revision evidence.
 
 ## Reproducibility scope
 

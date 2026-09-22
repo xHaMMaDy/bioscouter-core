@@ -10,7 +10,7 @@ authors:
   - family-names: "Hassanein"
     given-names: "Sameh E."
     orcid: "https://orcid.org/0000-0001-8997-719X"
-version: "0.3.0"
+version: "0.3.1"
 date-released: "2026-09-22"
 repository-code: "https://github.com/xHaMMaDy/bioscouter-core"
 license: "MIT"

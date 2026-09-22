@@ -3,7 +3,7 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "language": "eng",
   "description": "BioScouter Core contains the public scientific and reproducibility components of BioScouter, including public multi-omics repository adapters, unified dataset schemas, deterministic query expansion, metadata-readiness scoring, faceting, search orchestration, benchmark queries, frozen benchmark outputs, independent relevance-evaluation materials, and scoring scripts.",
   "creators": [
