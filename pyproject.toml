@@ -4,14 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bioscouter-core"
-version = "0.1.0"
+version = "0.3.0"
 description = "Public scientific core for BioScouter multi-omics dataset discovery"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
   { name = "Ibrahim Abdelkarim Hammad", email = "i.abdelkarim@nu.edu.eg" },
-  { name = "Amr M. Elhefnawy" }
+  { name = "Amr M. Alhfnawy" },
+  { name = "Sameh E. Hassanein" }
 ]
 keywords = ["bioinformatics", "multi-omics", "dataset discovery", "federated search", "reproducibility"]
 classifiers = [
